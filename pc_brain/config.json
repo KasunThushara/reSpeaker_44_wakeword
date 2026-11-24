@@ -1,5 +1,5 @@
 {
-  "_comment": "Paste your OpenRouter key below. Leave empty and the brain falls back to canned responses.",
+  "_comment": "Use the OPENROUTER_API_KEY environment variable for the key; leave this empty. Empty = canned responses.",
   "openrouter_key": "",
   "openrouter_model": "baidu/ernie-5.5-flash-preview:free",
   "weather_lat": 22.5431,
@@ -12,7 +12,7 @@
   "tts_volume": 100,
   "announce_percent": 100,
   "esp_ip": "192.168.7.205",
-  "default_track": "marvel.mp3",
+  "default_track": "track1.mp3",
   "openrouter_fallbacks": [
     "nvidia/nemotron-3.5-lightning:free",
     "inclusionai/ling-3.2-flash:free",

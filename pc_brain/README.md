@@ -61,7 +61,8 @@ stop:       "JS" flushes the buffer; the sender process is then killed
 - `config.json` keys: `audio_sink` (`speaker`|`pc`), `audio_port` (9100),
   `audio_gain` (0.0–1.0), `esp_ip` (last known XIAO address; refreshed
   automatically from any incoming `JARVIS` packet), `default_track`
-  (file in `ui/assets/music/` played by "play some music"), `tts_volume`
+  (file in `ui/assets/music/` played by "play some music" — the repo ships
+  `track1.mp3`; `marvel.mp3` is intentionally not committed), `tts_volume`
   (announcement source level 0–100), `announce_percent` (codec level while an
   announcement speaks)
 - quality is 16 kHz mono (≈8 kHz audio band) — fine for voice and casual music

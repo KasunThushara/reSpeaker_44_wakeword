@@ -39,7 +39,7 @@ the wake word and the command recognition run **on the ESP32-S3**.
         │  │ MultiNet7 (8 phrases)  │  │
         │  └──────────┬─────────────┘  │
         └─────────────┼────────────────┘
-                      │ WiFi  <ssid>
+                      │ WiFi (2.4 GHz)
         UDP :9001     │      UDP :9100
   "JARVIS seq id" ────┤      PCM cues ──►  (audio back to the robot)
         ACK seq  ◄────┘

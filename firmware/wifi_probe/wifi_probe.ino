@@ -13,8 +13,9 @@
 // Also expose a tiny echo: any packet we receive is answered with "PONG <text>"
 // back to its sender.
 
+// Fill in before flashing (empty strings = no network).
 static const char *SSID = "";
-static const char *PASS = "<your-password>";
+static const char *PASS = "";
 static const char *PC_IP = "192.168.7.217";
 static const uint16_t PORT = 9001;
 static const uint16_t LOCAL_PORT = 9002;

@@ -52,8 +52,10 @@
 #define AIC_ADDR 0x18
 
 // ---- PC link (UDP) ----
+// Fill these in before flashing. Empty strings boot the sketch in local-only
+// mode: wake word, chime and LED feedback still work, but nothing reaches the PC.
 #define WIFI_SSID ""
-#define WIFI_PASS "<your-password>"
+#define WIFI_PASS ""
 #define PC_IP     "192.168.7.217"
 #define PC_PORT   9001
 #define LOCAL_PORT 9002
@@ -185,6 +187,11 @@ static uint32_t pendingUntil = 0;
 
 // ---------------- PC link ----------------
 static void wifiConnect() {
+  if (WIFI_SSID[0] == 0 || WIFI_PASS[0] == 0) {
+    Serial.println(F("WiFi: no credentials - edit WIFI_SSID / WIFI_PASS"));
+    netReady = false;
+    return;
+  }
   WiFi.mode(WIFI_STA);
   WiFi.setSleep(false);
   WiFi.begin(WIFI_SSID, WIFI_PASS);

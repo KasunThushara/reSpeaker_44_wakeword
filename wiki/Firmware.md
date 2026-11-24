@@ -42,14 +42,18 @@ You want a line like `COM9  esp32  ESP32S3 Dev Module`.
 Open `firmware/wake_demo/wake_demo.ino` and edit the block at the top:
 
 ```cpp
-#define WIFI_SSID ""        // ← your 2.4 GHz network
-#define WIFI_PASS "<your-password>"    // ← your password
+#define WIFI_SSID ""                 // ← your 2.4 GHz network
+#define WIFI_PASS ""                 // ← your password
 #define PC_IP     "192.168.7.217"    // ← the PC running brain.py
 #define PC_PORT   9001
 ```
 
 Rules:
 
+- **Fill in your own credentials.** The repository ships with empty strings so
+  no one's network is published. With either string empty the sketch prints
+  `WiFi: no credentials - edit WIFI_SSID / WIFI_PASS` and boots **local-only**:
+  wake word, chime and LED feedback work, nothing reaches the PC.
 - **2.4 GHz only** — the ESP32-S3 has no 5 GHz radio.
 - `PC_IP` must be the PC's LAN address *at boot time*. Reserve it in DHCP so it
   does not move. (The **brain** learns the XIAO's address automatically; only
@@ -83,8 +87,12 @@ Why each option:
 A successful build prints something like:
 
 ```
-Sketch uses 2053523 bytes (65%) of program storage space.
+Sketch uses 2058975 bytes (65%) of program storage space.
 ```
+
+With the credentials left empty the linker drops the unused WiFi stack, so the
+same sketch reports only ~50 %; fill in your SSID/password and it returns to
+~65 %.
 
 ## 4. Put the wake model into the build directory (required!)
 
@@ -134,7 +142,7 @@ mode). Expected:
 
 ```
 === wake_demo walle: Hi Walle -> chime -> action -> PC + LED -> DOA ===
-WiFi: joining <ssid>....
+WiFi: joining <your-ssid>....
 WiFi: ip=192.168.7.205 rssi=-52 dBm -> PC 192.168.7.217:9001
 i2s full duplex: ok
 audio: ring 96000 bytes (ok)

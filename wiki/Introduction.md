@@ -34,7 +34,7 @@ visitor → "Hi Walle" → chime → "do a dance" → WALL·E dances + cue
 | --- | --- | --- |
 | idle | the XVF3800 animates the ring in DOA mode, dim | ring slowly follows voices |
 | 0.0 s | visitor says “Hi Walle” | ring flashes, WakeNet fires |
-| 0.1 s | firmware plays a 0.74 s chime at 70 % and switches command mode | bright ring cue, chime |
+| 0.1 s | firmware plays a ~0.7 s chime at 70 % and switches command mode | bright ring cue, chime |
 | 0.8 s | codec ducks to 30 %, microphone gate opens for 6.5 s | ring turns green-ish (listening) |
 | ~1.5 s | visitor says “do a dance” | — |
 | ~3 s | MultiNet returns command id 19, firmware prints the raw id | serial log shows `raw id=19 -> "do a dance"` |

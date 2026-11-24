@@ -31,7 +31,7 @@ WakeNet fires               MultiNet searches 6.5 s          PC
 
 1. **WakeNet** runs continuously on the I²S microphone stream. It is the tuned
    “Hi Walle” model (`wn9_hiwalle_tts2`) from `build/srmodels_hiwalle_sens.bin`.
-2. The firmware plays the 0.74 s chime, then switches ESP-SR into MultiNet mode
+2. The firmware plays the ~0.7 s chime, then switches ESP-SR into MultiNet mode
    for **6.5 s**.
 3. **MultiNet** matches against the eight strings compiled into the sketch. It
    returns the **command id** you registered.

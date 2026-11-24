@@ -172,7 +172,7 @@ Edit and restart the brain — no code change needed. The list is spoken as
 
 ```json
 {
-  "openrouter_key": "sk-or-v1-...",
+  "openrouter_key": "",
   "openrouter_model": "baidu/ernie-5.5-flash-preview:free",
   "openrouter_fallbacks": [
     "nvidia/nemotron-3.5-lightning:free",
@@ -184,6 +184,16 @@ Edit and restart the brain — no code change needed. The list is spoken as
   "weather_city": "Shenzhen"
 }
 ```
+
+**Never commit an API key.** Leave `openrouter_key` empty in the file and export
+the key instead — `brain.py` prefers the environment variable:
+
+```powershell
+$env:OPENROUTER_API_KEY = "sk-or-v1-…"
+```
+
+With no key the brain keeps working: jokes/model answers fall back to canned
+responses.
 
 Notes from picking the free model (2026-11-20):
 

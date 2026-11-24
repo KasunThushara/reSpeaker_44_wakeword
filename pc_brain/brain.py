@@ -455,7 +455,8 @@ def plain(text):
 
 
 def llm(prompt, system="You are JARVIS, a concise, dry-witted assistant for a maker fair demo. Answer in one or two short spoken sentences.", timeout=15):
-    key = str(CONFIG.get("openrouter_key", "")).strip()
+    key = os.environ.get("OPENROUTER_API_KEY", "").strip() or \
+        str(CONFIG.get("openrouter_key", "")).strip()
     if not key:
         return None
     # free endpoints are often overloaded -> try the configured model, then the

@@ -1,0 +1,11 @@
+
+=== power_check: 0xA5 hardware all-on, then silent ===
+probe 0x3C: ACK
+0xA5 sent. Bus is now IDLE - the meter sees the panel alone.
+  measure VCC at the module pin        (expect 3.3 V)
+  measure current in series with VCC   (mA range)
+
+  ~1 mA    = charge pump never starts
+  ~0 mA    = VCC not reaching the panel
+[5 s] 0xA5 held, bus idle
+[10 s] 0xA5 held, bus idle

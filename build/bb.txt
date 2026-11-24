@@ -1,0 +1,9 @@
+
+=== bb_oled: software I2C ~30 kHz, D13=SDA D14=SCL ===
+probe 0x3C: ACK
+init: 60 ACKs, 0 NAKs (want 0 NAKs to call it clean)
+>>> 0xA5 hardware all-on - PANEL SHOULD BE SOLID WHITE (15 s)
+0xFF frame: 1088 ACKs, 0 NAKs, 880 ms
+>>> frame all-on (10 s)
+>>> checkerboard (10 s)
+=== done; repeats every 20 s ===

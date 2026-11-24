@@ -1,0 +1,69 @@
+--- repeat ---
+  J2  D4/D5   (panel is supposed to be here)
+    line A GPIO5 : rises
+                     608 cycles = 2.53 us
+    line B GPIO6 : rises
+                     101 cycles = 0.42 us
+    => EXTERNAL PULL-UPS ON BOTH LINES: a powered module is wired here
+
+  J6  D2/D0   (empty control)
+    line A GPIO3 : NEVER rises  -> no external pull-up
+    line B GPIO1 : NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+  J5  D14/D13 (empty control)
+    line A GPIO41: NEVER rises  -> no external pull-up
+    line B GPIO40: NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+  J5  D3/D14  (empty control)
+    line A GPIO4 : NEVER rises  -> no external pull-up
+    line B GPIO41: NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+--- repeat ---
+  J2  D4/D5   (panel is supposed to be here)
+    line A GPIO5 : rises
+                     368 cycles = 1.53 us
+    line B GPIO6 : rises
+                     101 cycles = 0.42 us
+    => EXTERNAL PULL-UPS ON BOTH LINES: a powered module is wired here
+
+  J6  D2/D0   (empty control)
+    line A GPIO3 : NEVER rises  -> no external pull-up
+    line B GPIO1 : NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+  J5  D14/D13 (empty control)
+    line A GPIO41: NEVER rises  -> no external pull-up
+    line B GPIO40: NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+  J5  D3/D14  (empty control)
+    line A GPIO4 : NEVER rises  -> no external pull-up
+    line B GPIO41: NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+--- repeat ---
+  J2  D4/D5   (panel is supposed to be here)
+    line A GPIO5 : rises
+                     368 cycles = 1.53 us
+    line B GPIO6 : rises
+                     101 cycles = 0.42 us
+    => EXTERNAL PULL-UPS ON BOTH LINES: a powered module is wired here
+
+  J6  D2/D0   (empty control)
+    line A GPIO3 : NEVER rises  -> no external pull-up
+    line B GPIO1 : NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+  J5  D14/D13 (empty control)
+    line A GPIO41: NEVER rises  -> no external pull-up
+    line B GPIO40: NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+
+  J5  D3/D14  (empty control)
+    line A GPIO4 : NEVER rises  -> no external pull-up
+    line B GPIO41: NEVER rises  -> no external pull-up
+    => NOT a populated I2C bus
+

@@ -1,0 +1,53 @@
+  DOA  83 deg
+  DOA  83 deg
+  audio: 1 pkts, 0 underruns
+audio: gap 19 -> 21
+audio: gap 21 -> 23
+audio: gap 23 -> 26
+  audio: 247 pkts, 3 underruns
+audio: gap 312 -> 2
+audio: gap 2 -> 313
+audio: gap 317 -> 3
+audio: gap 3 -> 318
+audio: gap 339 -> 14
+audio: gap 14 -> 340
+audio: gap 344 -> 17
+audio: gap 17 -> 345
+audio: gap 354 -> 20
+audio: gap 20 -> 355
+audio: gap 369 -> 31
+audio: gap 31 -> 370
+audio: gap 382 -> 35
+audio: gap 35 -> 383
+audio: gap 390 -> 36
+audio: gap 36 -> 391
+audio: gap 395 -> 37
+audio: gap 37 -> 396
+audio: gap 405 -> 39
+audio: gap 39 -> 406
+audio: gap 436 -> 55
+audio: gap 55 -> 437
+audio: gap 452 -> 57
+audio: gap 57 -> 453
+audio: gap 466 -> 60
+audio: gap 60 -> 467
+audio: gap 487 -> 71
+audio: gap 71 -> 78
+audio: gap 78 -> 488
+  audio: 511 pkts, 3 underruns
+audio: STOP
+  DOA 128 deg
+  DOA  83 deg
+audio: gap 94 -> 117
+audio: gap 117 -> 129
+audio: gap 129 -> 141
+audio: gap 141 -> 144
+audio: gap 144 -> 155
+audio: gap 155 -> 169
+audio: gap 169 -> 197
+audio: gap 197 -> 206
+audio: gap 206 -> 213
+audio: gap 213 -> 223
+  audio: 522 pkts, 23 underruns
+  DOA  83 deg
+audio: gap 224 -> 239

@@ -1,0 +1,24 @@
+
+=== display_slow: same init at 20 / 50 / 100 kHz ===
+
+--- 20 kHz ---
+  init: 8 ok, 9 nak
+  >>> 0xA5 hardware all-on - panel solid white for 12 s if alive
+  0xFF frame: 0 ok, 68 nak - hold 6 s
+
+--- 50 kHz ---
+  init: 12 ok, 5 nak
+  >>> 0xA5 hardware all-on - panel solid white for 12 s if alive
+  0xFF frame: 9 ok, 59 nak - hold 6 s
+
+--- 100 kHz ---
+  init: 15 ok, 2 nak
+  >>> 0xA5 hardware all-on - panel solid white for 12 s if alive
+  0xFF frame: 60 ok, 8 nak - hold 6 s
+
+=== clock sweep complete; repeating in 5 s ===
+--- repeat ---
+
+--- 20 kHz ---
+  init: 7 ok, 10 nak
+  >>> 0xA5 hardware all-on - panel solid white for 12 s if alive

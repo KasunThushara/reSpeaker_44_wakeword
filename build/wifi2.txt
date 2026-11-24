@@ -1,0 +1,584 @@
+
+=== wifi_probe v2: bidirectional UDP test ===
+connecting to <ssid>....
+connected: ip=192.168.7.102 gw=192.168.6.2 rssi=-57 ch=1
+listening on UDP 9002, sending to 192.168.7.217:9001 every 3 s
+(a packet from the PC should print as   << RX ...)
+[    5s] up, rx so far: 0
+  >> TX JARVIS 0002 0
+  >> TX JARVIS 0003 0
+[   10s] up, rx so far: 0
+  >> TX JARVIS 0004 0
+  << RX from 192.168.7.217:56218  len=15  HELLO-FROM-PC 1
+[   15s] up, rx so far: 1
+  << RX from 192.168.7.217:56218  len=15  HELLO-FROM-PC 2
+  >> TX JARVIS 0005 0
+  << RX from 192.168.7.217:56218  len=15  HELLO-FROM-PC 3
+  >> TX JARVIS 0006 0
+[   20s] up, rx so far: 3
+  >> TX JARVIS 0007 0
+  >> TX JARVIS 0008 0
+[   25s] up, rx so far: 3
+  >> TX JARVIS 0009 0
+  << RX from 192.168.7.217:9001  len=6  ACK 9
+
+[   30s] up, rx so far: 4
+  >> TX JARVIS 0010 0
+  << RX from 192.168.7.217:9001  len=7  ACK 10
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  >> TX JARVIS 0011 0
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=7  ACK 11
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+[   35s] up, rx so far: 199
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+
+  << RX from 192.168.7.217:9001  len=11  ERR format
+

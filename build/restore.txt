@@ -1,0 +1,20 @@
+
+=== wake_demo v3: Hi ESP -> chime -> command -> animation -> DOA ===
+say: "turn it red" "switch to green" "paint it blue" "make a rainbow"
+     "all lights on" "turn it off" "slow motion"/"calm down" "spin the ring"
+AIC3104 output unmuted at 0 dB: ok
+  DOA 107 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  93 deg
+  DOA  92 deg
+  DOA 303 deg
+  DOA 304 deg
+  DOA 304 deg

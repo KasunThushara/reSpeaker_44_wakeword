@@ -1,0 +1,28 @@
+
+=== wake_demo v4: Jarvis -> chime -> command -> PC + LED -> DOA ===
+say: "play some music" "stop the music" "make a picture" "tell me a joke"
+     "change the mood" "show me the weather" "start the demo"
+     "shut it down" "ask the model"
+WiFi: joining <ssid>
+WiFi: ip=192.168.7.102 rssi=-55 dBm -> PC 192.168.7.217:9001
+AIC3104 output unmuted at 0 dB: ok
+i2s full duplex: ok
+  -> DOA idle (boot)
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Jarvis, then a command right away
+  DOA 250 deg
+  DOA  74 deg
+  DOA  64 deg
+  DOA  64 deg
+  DOA  64 deg
+  DOA  64 deg
+  DOA  64 deg
+  DOA  64 deg
+  DOA  64 deg
+  DOA  60 deg

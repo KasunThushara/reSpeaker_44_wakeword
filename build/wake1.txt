@@ -1,0 +1,373 @@
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x42037f7b  PS      : 0x00060d30  A0      : 0x82038391  A1      : 0x3fcebc40  
+A2      : 0x00000000  A3      : 0x3c3347d8  A4      : 0x00000008  A5      : 0x3fcebc20  
+A6      : 0x3c335280  A7      : 0x00000031  A8      : 0xfffffffc  A9      : 0x3c3347d8  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3c334bc4  A13     : 0x3fffffff  
+A14     : 0x3c334790  A15     : 0x00000000  SAR     : 0x00000017  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xfffffffc  LBEG    : 0x42071de6  LEND    : 0x42071e1e  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x42037f78:0x3fcebc40 0x4203838e:0x3fcebc60 0x42019b61:0x3fcebc90 0x42004bc1:0x3fcebcc0 0x420046b2:0x3fcebd00 0x42003672:0x3fcebd30 0x42007cea:0x3fcebd60 0x4037dd25:0x3fcebd80
+
+
+
+
+ELF file SHA256: 62f6aefb5
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x9 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379abe
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x10cc
+load:0x403c8700,len:0xc2c
+load:0x403cb700,len:0x30b0
+entry 0x403c88b8
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328844
+i2s.begin: ok
+configureRX 32->16: ok

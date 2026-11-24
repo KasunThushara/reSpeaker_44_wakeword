@@ -1,0 +1,39 @@
+
+=== audio_play (N2): speaker path test ===
+pins: BCK=8 WS=7 DOUT=44 DIN=43
+chime: 11849 samples = 0.74 s at 16 kHz
+i2s.begin (full duplex): ok
+
+--- test 1: 440 Hz tone, 3 bursts of 400 ms ---
+  burst 1
+  tone: 1600 samples = 0.10 s of audio, written in 23 ms (4.3x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 33 ms (3.0x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 103 ms (1.0x realtime)
+  burst 2
+  tone: 1600 samples = 0.10 s of audio, written in 18 ms (5.6x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 103 ms (1.0x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 88 ms (1.1x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 103 ms (1.0x realtime)
+  burst 3
+  tone: 1600 samples = 0.10 s of audio, written in 18 ms (5.6x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 103 ms (1.0x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 88 ms (1.1x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 103 ms (1.0x realtime)
+
+--- test 2: wake chime ---
+  chime: 11849 samples = 0.74 s of audio, written in 665 ms (1.1x realtime)
+
+--- done. repeating every 6 s ---
+--- chime ---
+  chime: 11849 samples = 0.74 s of audio, written in 675 ms (1.1x realtime)
+--- tone ---
+  tone: 1600 samples = 0.10 s of audio, written in 18 ms (5.6x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 103 ms (1.0x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 88 ms (1.1x realtime)
+--- chime ---
+  chime: 11849 samples = 0.74 s of audio, written in 675 ms (1.1x realtime)
+--- tone ---
+  tone: 1600 samples = 0.10 s of audio, written in 18 ms (5.6x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 103 ms (1.0x realtime)
+  tone: 1600 samples = 0.10 s of audio, written in 88 ms (1.1x realtime)
+--- chime ---

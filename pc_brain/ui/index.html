@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S. // Mark VII Holographic Chassis & Arc Reactor</title>
+    <script src="/vendor/tailwind.js"></script>
+    <link href="/vendor/fonts.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-obsidian: #07090d;
+            --cyan-primary: #00d8ff;
+            --cyan-glow: rgba(0, 216, 255, 0.65);
+            --cyan-dim: rgba(0, 216, 255, 0.16);
+            --crimson-accent: #ff3344;
+            --crimson-glow: rgba(255, 51, 68, 0.65);
+        }
+
+        * {
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-obsidian);
+            color: var(--cyan-primary);
+            font-family: 'Rajdhani', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Subtle blueprint grid background matching the Rainmeter aesthetic */
+        .blueprint-bg {
+            position: fixed;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 50% 48%, rgba(0, 216, 255, 0.08) 0%, rgba(7, 9, 13, 0.96) 72%),
+                linear-gradient(to right, rgba(0, 216, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 216, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(to right, rgba(0, 216, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 216, 255, 0.015) 1px, transparent 1px);
+            background-size: 100% 100%, 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+            z-index: 0;
+        }
+
+        /* Holographic CRT / Laser Scanline Overlay */
+        .scanline-overlay {
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent 0px,
+                transparent 2px,
+                rgba(0, 216, 255, 0.03) 3px,
+                rgba(0, 0, 0, 0.25) 4px
+            );
+            pointer-events: none;
+            z-index: 20;
+            transition: opacity 0.4s ease;
+        }
+
+        .scan-beam {
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(
+                to bottom,
+                transparent,
+                rgba(0, 216, 255, 0.05) 50%,
+                rgba(0, 216, 255, 0.14) 98%,
+                rgba(0, 216, 255, 0.4) 100%
+            );
+            pointer-events: none;
+            z-index: 15;
+            animation: verticalScan 7s linear infinite;
+            transition: opacity 0.4s ease;
+        }
+
+        @keyframes verticalScan {
+            0% { transform: translateY(-150px); }
+            100% { transform: translateY(105vh); }
+        }
+
+        /* Main Stage Container */
+        .hologram-stage {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            perspective: 1200px;
+        }
+
+        .robot-assembly {
+            position: relative;
+            width: min(94vw, 860px);
+            height: min(88vh, 840px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.15s ease-out, filter 0.35s ease;
+            will-change: transform;
+        }
+
+        /* SVG & Canvas Layering */
+        svg.suit-wireframe {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            filter: drop-shadow(0 0 8px rgba(0, 216, 255, 0.25));
+            transition: filter 0.4s ease;
+        }
+
+        canvas#reactorCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* SVG Wireframe Stroke Classes */
+        .armor-outer {
+            fill: rgba(0, 216, 255, 0.025);
+            stroke: #00d8ff;
+            stroke-width: 1.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .armor-panel {
+            fill: rgba(4, 18, 28, 0.45);
+            stroke: #00d8ff;
+            stroke-width: 1.3;
+            stroke-linejoin: round;
+            transition: fill 0.3s ease, stroke 0.3s ease;
+        }
+
+        .armor-detail {
+            fill: none;
+            stroke: rgba(0, 216, 255, 0.52);
+            stroke-width: 0.85;
+            stroke-linecap: round;
+        }
+
+        .armor-micro-grid {
+            fill: none;
+            stroke: rgba(0, 216, 255, 0.18);
+            stroke-width: 0.55;
+        }
+
+        .crimson-circuit {
+            fill: rgba(255, 51, 68, 0.08);
+            stroke: #ff3344;
+            stroke-width: 1.35;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 5px rgba(255, 51, 68, 0.7));
+            transition: stroke 0.3s ease, filter 0.3s ease;
+        }
+
+        .crimson-node {
+            fill: #ff3344;
+            filter: drop-shadow(0 0 6px #ff3344);
+        }
+
+        /* Glowing Eyes Animation */
+        .eye-visor {
+            fill: #aef6ff;
+            stroke: #ffffff;
+            stroke-width: 1.1;
+            filter: drop-shadow(0 0 8px #00d8ff) drop-shadow(0 0 18px #00d8ff);
+            transition: all 0.3s ease;
+        }
+
+        .eye-socket {
+            fill: rgba(0, 12, 22, 0.9);
+            stroke: #00d8ff;
+            stroke-width: 1.5;
+        }
+
+        /* Diagnostic Overdrive State */
+        body.diagnostic-boost .robot-assembly {
+            filter: drop-shadow(0 0 16px rgba(0, 216, 255, 0.55));
+        }
+        body.diagnostic-boost .armor-panel {
+            fill: rgba(0, 216, 255, 0.09);
+        }
+        body.diagnostic-boost .crimson-circuit {
+            stroke: #ff4d5e;
+            stroke-width: 1.8;
+            filter: drop-shadow(0 0 10px #ff3344);
+        }
+        body.diagnostic-boost .eye-visor {
+            fill: #ffffff;
+            filter: drop-shadow(0 0 12px #00d8ff) drop-shadow(0 0 28px #00d8ff);
+        }
+
+        /* Minimalist HUD Control Bar */
+        .hud-controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 30;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 14px;
+            background: rgba(7, 13, 21, 0.78);
+            border: 1px solid rgba(0, 216, 255, 0.32);
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), inset 0 0 12px rgba(0, 216, 255, 0.08);
+        }
+
+        .hud-btn {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 216, 255, 0.4);
+            background: rgba(0, 216, 255, 0.07);
+            color: #9beeff;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .hud-btn:hover {
+            background: rgba(0, 216, 255, 0.2);
+            border-color: #00d8ff;
+            color: #ffffff;
+            box-shadow: 0 0 14px rgba(0, 216, 255, 0.45);
+        }
+
+        .hud-btn.active {
+            background: rgba(0, 216, 255, 0.26);
+            border-color: #00d8ff;
+            color: #ffffff;
+            box-shadow: 0 0 14px rgba(0, 216, 255, 0.5);
+        }
+
+        .hud-btn.surge-btn {
+            border-color: rgba(255, 51, 68, 0.55);
+            background: rgba(255, 51, 68, 0.12);
+            color: #ff9aa3;
+        }
+
+        .hud-btn.surge-btn:hover,
+        .hud-btn.surge-btn.surging {
+            background: rgba(255, 51, 68, 0.3);
+            border-color: #ff3344;
+            color: #ffffff;
+            box-shadow: 0 0 18px rgba(255, 51, 68, 0.65);
+        }
+
+        .indicator-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #00d8ff;
+            box-shadow: 0 0 6px #00d8ff;
+        }
+
+        .surge-btn .indicator-dot {
+            background: #ff3344;
+            box-shadow: 0 0 6px #ff3344;
+        }
+
+        /* Subtle Top Technical Tag */
+        .chassis-tag {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.24em;
+            color: rgba(0, 216, 255, 0.6);
+            text-transform: uppercase;
+            z-index: 25;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Blueprint Grid & Hologram Scanline Layers -->
+    <div class="blueprint-bg"></div>
+    <div id="scanBeam" class="scan-beam"></div>
+    <div id="scanlineOverlay" class="scanline-overlay"></div>
+
+    <!-- Subtle Chassis Identifier -->
+    <div class="chassis-tag">MARK VII // HOLOGRAPHIC CHASSIS SCHEMATIC</div>
+
+    <!-- Main Interactive Robot Stage -->
+    <main class="hologram-stage" id="hologramStage">
+        <div class="robot-assembly" id="robotAssembly">
+            
+            <!-- Detailed Vector Wireframe of Iron Man Helmet & Upper Torso Bust -->
+            <svg class="suit-wireframe" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <!-- Micro-grid pattern inside helmet & chest armor plates -->
+                    <pattern id="armorMesh" width="12" height="12" patternUnits="userSpaceOnUse">
+                        <path d="M 12 0 L 0 0 0 12" fill="none" stroke="rgba(0, 216, 255, 0.14)" stroke-width="0.6"/>
+                    </pattern>
+
+                    <!-- Soft Cyan Radial Glow -->
+                    <radialGradient id="chestCoreAura" cx="50%" cy="66%" r="36%">
+                        <stop offset="0%" stop-color="rgba(0, 216, 255, 0.25)"/>
+                        <stop offset="55%" stop-color="rgba(0, 216, 255, 0.06)"/>
+                        <stop offset="100%" stop-color="rgba(0, 216, 255, 0)"/>
+                    </radialGradient>
+
+                    <!-- Eye Gradient -->
+                    <linearGradient id="eyeBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#6ceeff"/>
+                        <stop offset="50%" stop-color="#ffffff"/>
+                        <stop offset="100%" stop-color="#6ceeff"/>
+                    </linearGradient>
+                </defs>
+
+                <!-- Ambient Core Backlight -->
+                <circle cx="400" cy="530" r="260" fill="url(#chestCoreAura)" />
+
+                <!-- ========================================================= -->
+                <!-- 1. UPPER TORSO, SHOULDERS & PECTORAL ARMOR WIREFRAME      -->
+                <!-- ========================================================= -->
+                <g id="torsoGroup">
+                    <!-- Outer Shoulder Pauldrons & Deltoid Silhouette -->
+                    <path class="armor-outer" fill="url(#armorMesh)" d="
+                        M 285 352 
+                        L 220 368 L 160 398 L 122 442 L 114 494 L 138 504 L 154 468 L 188 456 
+                        L 202 522 L 222 612 L 246 675 L 315 712 L 400 722 L 485 712 L 554 675 
+                        L 578 612 L 598 522 L 612 456 L 646 468 L 662 504 L 686 494 L 678 442 
+                        L 640 398 L 580 368 L 515 352 Z" />
+
+                    <!-- Left Shoulder Pauldron Segmented Plates -->
+                    <path class="armor-panel" d="M 278 355 L 208 374 L 156 404 L 126 446 L 154 462 L 194 422 L 258 394 Z" />
+                    <path class="armor-panel" d="M 258 394 L 194 422 L 162 464 L 192 482 L 235 446 L 274 422 Z" />
+                    <path class="armor-detail" d="M 176 392 L 205 416 M 218 372 L 238 402 M 142 425 L 172 440" />
+                    <!-- Left Deltoid Outer Mechanical Joint -->
+                    <path class="armor-panel" d="M 126 446 L 114 494 L 138 504 L 154 468 Z" />
+                    <path class="armor-detail" d="M 122 466 L 146 476 M 119 480 L 142 490" />
+
+                    <!-- Right Shoulder Pauldron Segmented Plates (Mirrored) -->
+                    <path class="armor-panel" d="M 522 355 L 592 374 L 644 404 L 674 446 L 646 462 L 606 422 L 542 394 Z" />
+                    <path class="armor-panel" d="M 542 394 L 606 422 L 638 464 L 608 482 L 565 446 L 526 422 Z" />
+                    <path class="armor-detail" d="M 624 392 L 595 416 M 582 372 L 562 402 M 658 425 L 628 440" />
+                    <!-- Right Deltoid Outer Mechanical Joint -->
+                    <path class="armor-panel" d="M 674 446 L 686 494 L 662 504 L 646 468 Z" />
+                    <path class="armor-detail" d="M 678 466 L 654 476 M 681 480 L 658 490" />
+
+                    <!-- Trapezius & Collarbone Structural Framing -->
+                    <path class="armor-panel" d="M 326 324 L 278 355 L 288 386 L 348 398 L 362 366 Z" />
+                    <path class="armor-panel" d="M 474 324 L 522 355 L 512 386 L 452 398 L 438 366 Z" />
+                    
+                    <!-- Pectoral Upper Armor Plates (Left & Right) -->
+                    <path class="armor-panel" d="M 274 422 L 222 462 L 228 532 L 298 552 L 325 488 L 312 435 Z" />
+                    <path class="armor-panel" d="M 526 422 L 578 462 L 572 532 L 502 552 L 475 488 L 488 435 Z" />
+
+                    <!-- Pectoral Internal Tech Etching & Vents -->
+                    <path class="armor-detail" d="
+                        M 240 468 L 295 454 M 238 486 L 288 474 M 242 506 L 285 498
+                        M 560 468 L 505 454 M 562 486 L 512 474 M 558 506 L 515 498" />
+                    <polygon class="armor-detail" points="256,434 294,424 290,438 252,448" />
+                    <polygon class="armor-detail" points="544,434 506,424 510,438 548,448" />
+
+                    <!-- Ribcage / Abdominal Segmented Lateral Armor -->
+                    <path class="armor-panel" d="M 202 522 L 228 532 L 246 602 L 218 594 Z" />
+                    <path class="armor-panel" d="M 218 594 L 246 602 L 266 662 L 238 652 Z" />
+                    <path class="armor-panel" d="M 598 522 L 572 532 L 554 602 L 582 594 Z" />
+                    <path class="armor-panel" d="M 582 594 L 554 602 L 534 662 L 562 652 Z" />
+
+                    <!-- Lower Sternum & Abdominal Center Plates -->
+                    <path class="armor-panel" d="M 298 588 L 348 614 L 452 614 L 502 588 L 486 654 L 400 668 L 314 654 Z" />
+                    <path class="armor-panel" d="M 314 654 L 400 668 L 486 654 L 472 706 L 400 718 L 328 706 Z" />
+                    <path class="armor-detail" d="M 355 636 L 445 636 M 362 686 L 438 686 M 400 614 L 400 718" />
+
+                    <!-- ===================================================== -->
+                    <!-- CRIMSON SUB-SURFACE HYDRAULIC & COLLAR CIRCUITS       -->
+                    <!-- (Matches the red/pink neck & chest conduits in image) -->
+                    <!-- ===================================================== -->
+                    <g id="crimsonConduits">
+                        <!-- Collarbone Red Circuitry -->
+                        <path class="crimson-circuit" d="
+                            M 332 344 L 346 376 L 372 396 L 400 402 L 428 396 L 454 376 L 468 344" />
+                        <path class="crimson-circuit" d="
+                            M 316 364 L 336 392 L 364 414 L 382 432
+                            M 484 364 L 464 392 L 436 414 L 418 432" />
+                        <!-- Red Mechanical Nodes & Micro-Pistons on Collar -->
+                        <circle class="crimson-node" cx="346" cy="376" r="2.8" />
+                        <circle class="crimson-node" cx="454" cy="376" r="2.8" />
+                        <circle class="crimson-node" cx="372" cy="396" r="2.5" />
+                        <circle class="crimson-node" cx="428" cy="396" r="2.5" />
+                        <rect class="crimson-circuit" x="389" y="388" width="22" height="10" rx="2" />
+
+                        <!-- Lower Chest / Ribcage Red Sub-frame Wiring -->
+                        <path class="crimson-circuit" d="
+                            M 248 564 L 276 588 L 288 634 L 264 676
+                            M 552 564 L 524 588 L 512 634 L 536 676" />
+                        <path class="crimson-circuit" d="
+                            M 276 588 L 312 608 M 524 588 L 488 608
+                            M 288 634 L 322 648 M 512 634 L 478 648" />
+                        <circle class="crimson-node" cx="276" cy="588" r="2.4" />
+                        <circle class="crimson-node" cx="524" cy="588" r="2.4" />
+                        <circle class="crimson-node" cx="288" cy="634" r="2.4" />
+                        <circle class="crimson-node" cx="512" cy="634" r="2.4" />
+                    </g>
+                </g>
+
+                <!-- ========================================================= -->
+                <!-- 2. NECK HYDRAULICS & IRON MAN MARK VII HELMET             -->
+                <!-- ========================================================= -->
+                <g id="helmetGroup">
+                    <!-- Neck Structural Column -->
+                    <path class="armor-panel" d="M 342 292 L 332 344 L 372 384 L 428 384 L 468 344 L 458 292 Z" />
+                    <path class="armor-detail" d="
+                        M 340 315 L 368 332 M 336 332 L 366 350
+                        M 460 315 L 432 332 M 464 332 L 434 350
+                        M 382 325 L 382 382 M 418 325 L 418 382" />
+
+                    <!-- Main Helmet Outer Dome & Cheek Silhouette -->
+                    <path class="armor-outer" fill="url(#armorMesh)" d="
+                        M 400 72
+                        C 356 72, 326 98, 322 146
+                        L 318 206
+                        L 324 258
+                        L 346 298
+                        L 376 322
+                        L 424 322
+                        L 454 298
+                        L 476 258
+                        L 482 206
+                        L 478 146
+                        C 474 98, 444 72, 400 72 Z" />
+
+                    <!-- Crown Central Crest / Forehead Plate -->
+                    <path class="armor-panel" d="
+                        M 378 75 L 384 134 L 416 134 L 422 75
+                        C 415 73, 385 73, 378 75 Z" />
+                    <path class="armor-detail" d="M 400 74 L 400 134" />
+
+                    <!-- Upper Forehead Brow Ridge (Iconic Aggressive V-Shape) -->
+                    <path class="armor-panel" d="
+                        M 332 138 L 384 134 L 400 156 L 416 134 L 468 138
+                        L 464 188 L 414 198 L 400 186 L 386 198 L 336 188 Z" />
+
+                    <!-- Temple / Ear Mechanical Pods -->
+                    <path class="armor-panel" d="M 322 154 L 312 174 L 314 226 L 324 242 L 332 204 Z" />
+                    <path class="armor-panel" d="M 478 154 L 488 174 L 486 226 L 476 242 L 468 204 Z" />
+                    <circle class="armor-detail" cx="320" cy="198" r="6" />
+                    <circle class="armor-detail" cx="480" cy="198" r="6" />
+
+                    <!-- Faceplate Outer Contour (Gold/Titanium Mask Separation Seam) -->
+                    <path class="armor-panel" d="
+                        M 336 188 L 386 198 L 400 186 L 414 198 L 464 188
+                        L 460 236 L 444 268 L 426 276 L 418 264 L 382 264 L 374 276 L 356 268 L 340 236 Z" />
+
+                    <!-- Cheekbone Sculpted Facets -->
+                    <path class="armor-detail" d="
+                        M 338 212 L 368 224 L 376 254 L 352 246 Z
+                        M 462 212 L 432 224 L 424 254 L 448 246 Z
+                        M 368 224 L 388 214 M 432 224 L 412 214" />
+
+                    <!-- Mouth Slit & Chin Guard Plate -->
+                    <path class="armor-panel" d="
+                        M 374 276 L 382 264 L 418 264 L 426 276 L 434 294 L 418 314 L 382 314 L 366 294 Z" />
+                    <!-- Stern Mouth Line -->
+                    <path class="armor-outer" d="M 372 280 L 384 273 L 416 273 L 428 280" />
+                    <!-- Chin Vent Details -->
+                    <path class="armor-detail" d="
+                        M 382 296 L 418 296
+                        M 386 305 L 414 305
+                        M 356 268 L 366 294 L 382 314
+                        M 444 268 L 434 294 L 418 314" />
+
+                    <!-- Eye Sockets (Dark Recessed Housing) -->
+                    <polygon class="eye-socket" points="338,186 384,196 382,208 342,202" />
+                    <polygon class="eye-socket" points="462,186 416,196 418,208 458,202" />
+
+                    <!-- Glowing Cyan LED Eyes -->
+                    <polygon id="leftEye" class="eye-visor" points="341,189 381,197 379,205 344,200" />
+                    <polygon id="rightEye" class="eye-visor" points="459,189 419,197 421,205 456,200" />
+                </g>
+            </svg>
+
+            <!-- High-Precision Multi-Layered Animated Arc Reactor Canvas -->
+            <canvas id="reactorCanvas"></canvas>
+        </div>
+    </main>
+
+    <!-- Minimalist Interactive Controls -->
+    <nav class="hud-controls" aria-label="Hologram Controls">
+        <button id="surgeBtn" class="hud-btn surge-btn" title="Trigger Unibeam Reactor Power Surge">
+            <span class="indicator-dot"></span>
+            <span>Reactor Surge</span>
+        </button>
+        <button id="diagBtn" class="hud-btn" title="Toggle High-Contrast Diagnostic Glow">
+            <span class="indicator-dot"></span>
+            <span>Diagnostic Glow</span>
+        </button>
+        <button id="scanBtn" class="hud-btn active" title="Toggle Holographic Scanlines">
+            <span class="indicator-dot"></span>
+            <span>Scanlines</span>
+        </button>
+    </nav>
+
+    <script>
+        /**
+         * J.A.R.V.I.S. Holographic Arc Reactor & Chassis Controller
+         * Renders the multi-ring rotating Mark VII Arc Reactor directly onto the chest cavity
+         * of the vector wireframe, complete with turbine coils, radial ticks, crimson telemetry arcs,
+         * and interactive power surge dynamics.
+         */
+        (function () {
+            const canvas = document.getElementById('reactorCanvas');
+            const ctx = canvas.getContext('2d');
+            const assembly = document.getElementById('robotAssembly');
+            const surgeBtn = document.getElementById('surgeBtn');
+            const diagBtn = document.getElementById('diagBtn');
+            const scanBtn = document.getElementById('scanBtn');
+            const scanBeam = document.getElementById('scanBeam');
+            const scanlineOverlay = document.getElementById('scanlineOverlay');
+
+            // Interactive state
+            let state = {
+                time: 0,
+                surgeIntensity: 0,      // 0.0 (idle) -> 1.0 (full power surge)
+                targetSurge: 0,
+                diagnosticBoost: false,
+                scanlinesEnabled: true,
+                mouseX: 0,
+                mouseY: 0,
+                currentTiltX: 0,
+                currentTiltY: 0
+            };
+            window.__hud = state;
+
+            // Resize canvas to match high-DPI display and container dimensions
+            function resizeCanvas() {
+                const rect = assembly.getBoundingClientRect();
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                canvas.width = rect.width * dpr;
+                canvas.height = rect.height * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            // Subtle 3D Parallax on Mouse / Touch Move
+            function handlePointerMove(clientX, clientY) {
+                const nx = (clientX / window.innerWidth) * 2 - 1;  // -1 to 1
+                const ny = (clientY / window.innerHeight) * 2 - 1; // -1 to 1
+                state.mouseX = nx;
+                state.mouseY = ny;
+            }
+
+            window.addEventListener('mousemove', (e) => handlePointerMove(e.clientX, e.clientY));
+            window.addEventListener('touchmove', (e) => {
+                if (e.touches.length > 0) {
+                    handlePointerMove(e.touches[0].clientX, e.touches[0].clientY);
+                }
+            }, { passive: true });
+
+            // Trigger Reactor Power Surge
+            function triggerSurge() {
+                state.targetSurge = 1.0;
+                surgeBtn.classList.add('surging');
+                setTimeout(() => {
+                    state.targetSurge = 0.0;
+                    surgeBtn.classList.remove('surging');
+                }, 1800);
+            }
+
+            surgeBtn.addEventListener('click', triggerSurge);
+
+            // Clicking directly on the Arc Reactor center also triggers a surge
+            document.getElementById('hologramStage').addEventListener('click', (e) => {
+                if (e.target.closest('.hud-controls')) return;
+                triggerSurge();
+            });
+
+            // Toggle Diagnostic High-Glow Mode
+            diagBtn.addEventListener('click', () => {
+                state.diagnosticBoost = !state.diagnosticBoost;
+                document.body.classList.toggle('diagnostic-boost', state.diagnosticBoost);
+                diagBtn.classList.toggle('active', state.diagnosticBoost);
+            });
+
+            // Toggle Hologram Scanlines
+            scanBtn.addEventListener('click', () => {
+                state.scanlinesEnabled = !state.scanlinesEnabled;
+                scanBtn.classList.toggle('active', state.scanlinesEnabled);
+                const opacity = state.scanlinesEnabled ? '1' : '0';
+                scanBeam.style.opacity = opacity;
+                scanlineOverlay.style.opacity = opacity;
+            });
+
+            /**
+             * Draws a segmented radial tick ring
+             */
+            function drawTickRing(cx, cy, radius, count, tickLen, lineWidth, color, rotation, skipMod = 0) {
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate(rotation);
+                ctx.strokeStyle = color;
+                ctx.lineWidth = lineWidth;
+
+                const step = (Math.PI * 2) / count;
+                for (let i = 0; i < count; i++) {
+                    if (skipMod > 0 && i % skipMod === 0) continue;
+                    const angle = i * step;
+                    const x1 = Math.cos(angle) * (radius - tickLen * 0.5);
+                    const y1 = Math.sin(angle) * (radius - tickLen * 0.5);
+                    const x2 = Math.cos(angle) * (radius + tickLen * 0.5);
+                    const y2 = Math.sin(angle) * (radius + tickLen * 0.5);
+
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                }
+                ctx.restore();
+            }
+
+            /**
+             * Draws segmented technical arc brackets around the reactor
+             */
+            function drawSegmentedArcs(cx, cy, radius, segments, lineWidth, color, rotation) {
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate(rotation);
+                ctx.strokeStyle = color;
+                ctx.lineWidth = lineWidth;
+
+                segments.forEach(([startDeg, endDeg]) => {
+                    ctx.beginPath();
+                    ctx.arc(0, 0, radius, (startDeg * Math.PI) / 180, (endDeg * Math.PI) / 180);
+                    ctx.stroke();
+                });
+                ctx.restore();
+            }
+
+            /**
+             * Main Animation Loop
+             */
+            function animate(timestamp) {
+                const dt = 0.016;
+                state.time += dt;
+
+                // Smoothly interpolate surge intensity
+                state.surgeIntensity += (state.targetSurge - state.surgeIntensity) * 0.08;
+
+                // Smoothly interpolate subtle 3D parallax tilt
+                state.currentTiltX += (state.mouseX * 5 - state.currentTiltX) * 0.08;
+                state.currentTiltY += (-state.mouseY * 4 - state.currentTiltY) * 0.08;
+                assembly.style.transform = `rotateY(${state.currentTiltX.toFixed(2)}deg) rotateX(${state.currentTiltY.toFixed(2)}deg)`;
+
+                const width = assembly.clientWidth;
+                const height = assembly.clientHeight;
+                ctx.clearRect(0, 0, width, height);
+
+                // Map SVG viewBox coordinate (400, 526) into rendered container space
+                // SVG viewBox is 800x800 with preserveAspectRatio="xMidYMid meet"
+                const scale = Math.min(width / 800, height / 800);
+                const offsetX = (width - 800 * scale) / 2;
+                const offsetY = (height - 800 * scale) / 2;
+
+                // Exact chest center matching the Rainmeter Iron Man Arc Reactor placement
+                const cx = offsetX + 400 * scale;
+                const cy = offsetY + 526 * scale;
+                const baseR = 132 * scale; // Outer perimeter radius of the HUD reactor
+
+                const speedMult = 1 + state.surgeIntensity * 3.8;
+                const pulse = Math.sin(state.time * 4) * 0.04 + state.surgeIntensity * 0.14;
+
+                // -----------------------------------------------------------
+                // LAYER 1: Outer HUD Housing & Crimson Sector Arc
+                // (Matches the distinct red left-arc & grey/cyan rings in image)
+                // -----------------------------------------------------------
+                ctx.save();
+                // Dark core housing backdrop so chest lines cleanly recess behind reactor
+                const housingGrad = ctx.createRadialGradient(cx, cy, baseR * 0.1, cx, cy, baseR * 1.12);
+                housingGrad.addColorStop(0, 'rgba(4, 14, 24, 0.95)');
+                housingGrad.addColorStop(0.75, 'rgba(6, 12, 20, 0.85)');
+                housingGrad.addColorStop(1, 'rgba(6, 12, 20, 0)');
+                ctx.fillStyle = housingGrad;
+                ctx.beginPath();
+                ctx.arc(cx, cy, baseR * 1.12, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Crimson Power Gauge Arc on the Left (Signature detail from wallpaper)
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate(Math.sin(state.time * 0.7) * 0.05);
+                ctx.strokeStyle = `rgba(255, 51, 68, ${0.72 + state.surgeIntensity * 0.28})`;
+                ctx.lineWidth = 11 * scale;
+                ctx.shadowColor = '#ff3344';
+                ctx.shadowBlur = (10 + state.surgeIntensity * 16) * scale;
+                ctx.beginPath();
+                ctx.arc(0, 0, baseR * 0.86, (148 * Math.PI) / 180, (226 * Math.PI) / 180);
+                ctx.stroke();
+                ctx.restore();
+
+                // Outer Metallic-Cyan Concentric Rings
+                drawSegmentedArcs(
+                    cx, cy, baseR * 1.02,
+                    [[15, 78], [96, 165], [195, 262], [282, 348]],
+                    2.2 * scale,
+                    'rgba(0, 216, 255, 0.55)',
+                    state.time * 0.18 * speedMult
+                );
+
+                drawSegmentedArcs(
+                    cx, cy, baseR * 0.94,
+                    [[0, 120], [140, 245], [265, 340]],
+                    1.2 * scale,
+                    'rgba(160, 235, 255, 0.35)',
+                    -state.time * 0.25 * speedMult
+                );
+
+                // -----------------------------------------------------------
+                // LAYER 2: High-Density Radial Telemetry Ticks
+                // -----------------------------------------------------------
+                drawTickRing(
+                    cx, cy,
+                    baseR * 0.76,
+                    72,
+                    9 * scale,
+                    1.2 * scale,
+                    'rgba(0, 216, 255, 0.5)',
+                    state.time * 0.12 * speedMult,
+                    6
+                );
+
+                drawTickRing(
+                    cx, cy,
+                    baseR * 0.64,
+                    48,
+                    6 * scale,
+                    1.5 * scale,
+                    'rgba(220, 248, 255, 0.65)',
+                    -state.time * 0.32 * speedMult,
+                    0
+                );
+
+                // -----------------------------------------------------------
+                // LAYER 3: 10 Electromagnetic Palladium/New-Element Coils
+                // -----------------------------------------------------------
+                const coilCount = 10;
+                const coilRadius = baseR * 0.48;
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate(state.time * 0.42 * speedMult);
+
+                for (let i = 0; i < coilCount; i++) {
+                    const angle = (i * Math.PI * 2) / coilCount;
+                    ctx.save();
+                    ctx.rotate(angle);
+
+                    // Coil housing wedge
+                    ctx.fillStyle = `rgba(0, 216, 255, ${0.18 + state.surgeIntensity * 0.25})`;
+                    ctx.strokeStyle = '#00d8ff';
+                    ctx.lineWidth = 1.3 * scale;
+
+                    const w = 11 * scale;
+                    const h = 15 * scale;
+                    ctx.beginPath();
+                    ctx.roundRect(-w / 2, -coilRadius - h / 2, w, h, 2 * scale);
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Inner glowing coil filament
+                    ctx.fillStyle = '#bff6ff';
+                    ctx.fillRect(-w * 0.25, -coilRadius - h * 0.25, w * 0.5, h * 0.5);
+
+                    ctx.restore();
+                }
+                ctx.restore();
+
+                // -----------------------------------------------------------
+                // LAYER 4: Inner Turbine Blades & Triangular Core Aperture
+                // -----------------------------------------------------------
+                drawSegmentedArcs(
+                    cx, cy, baseR * 0.34,
+                    [[10, 105], [130, 225], [250, 345]],
+                    2.6 * scale,
+                    '#7ceeff',
+                    -state.time * 0.85 * speedMult
+                );
+
+                // Glowing Plasma Core Aura
+                const coreRadius = baseR * (0.28 + pulse * 0.25);
+                const coreGlow = ctx.createRadialGradient(cx, cy, 0, cx, cy, coreRadius * 2.2);
+                coreGlow.addColorStop(0, 'rgba(255, 255, 255, 0.98)');
+                coreGlow.addColorStop(0.25, `rgba(110, 238, 255, ${0.85 + state.surgeIntensity * 0.15})`);
+                coreGlow.addColorStop(0.55, `rgba(0, 216, 255, ${0.38 + state.surgeIntensity * 0.35})`);
+                coreGlow.addColorStop(1, 'rgba(0, 216, 255, 0)');
+
+                ctx.fillStyle = coreGlow;
+                ctx.beginPath();
+                ctx.arc(cx, cy, coreRadius * 2.2, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Inner Ring & Bright White-Cyan Center Nucleus
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 1.8 * scale;
+                ctx.beginPath();
+                ctx.arc(cx, cy, baseR * 0.20, 0, Math.PI * 2);
+                ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = '#00d8ff';
+                ctx.shadowBlur = (18 + state.surgeIntensity * 25) * scale;
+                ctx.beginPath();
+                ctx.arc(cx, cy, baseR * (0.12 + pulse * 0.12), 0, Math.PI * 2);
+                ctx.fill();
+
+                // Subtle Crosshair Reticle Lines across Reactor Center
+                ctx.shadowBlur = 0;
+                ctx.strokeStyle = 'rgba(0, 216, 255, 0.35)';
+                ctx.lineWidth = 0.9 * scale;
+                const crossInner = baseR * 0.23;
+                const crossOuter = baseR * 1.08;
+                ctx.beginPath();
+                ctx.moveTo(cx - crossOuter, cy);
+                ctx.lineTo(cx - crossInner, cy);
+                ctx.moveTo(cx + crossInner, cy);
+                ctx.lineTo(cx + crossOuter, cy);
+                ctx.moveTo(cx, cy - crossOuter);
+                ctx.lineTo(cx, cy - crossInner);
+                ctx.moveTo(cx, cy + crossInner);
+                ctx.lineTo(cx, cy + crossOuter);
+                ctx.stroke();
+
+                ctx.restore();
+
+                requestAnimationFrame(animate);
+            }
+
+            // Start rendering loop
+            window.onload = function () {
+                resizeCanvas();
+                requestAnimationFrame(animate);
+            };
+        })();
+    </script>
+
+<link rel="stylesheet" href="/jarvis-overlay.css?v=20261123f">
+<div id="jv-root"></div>
+<script src="/jarvis-overlay.js?v=20261123f"></script>
+</body>
+</html>

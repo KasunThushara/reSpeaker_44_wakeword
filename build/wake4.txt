@@ -1,0 +1,15 @@
+
+=== wake_probe: WakeNet "Hi ESP" on XVF3800 + XIAO S3 Plus ===
+PSRAM: 8388608 bytes total, 8386096 free
+free heap: 328836
+i2s.begin: ok
+configureRX 32->16: ok
+ESP_SR.begin: ok
+listening for "Hi ESP" - say it clearly, 0.5-2 m away
+[    5s] listening... wakes=0 (suppressed 0) heap=220116
+[   10s] listening... wakes=0 (suppressed 0) heap=220116
+[   15s] listening... wakes=0 (suppressed 0) heap=220116
+[   20s] listening... wakes=0 (suppressed 0) heap=220116
+[   25s] listening... wakes=0 (suppressed 0) heap=220116
+[   30s] listening... wakes=0 (suppressed 0) heap=220116
+[   35s] listening... wakes=0 (suppressed 0) heap=220116

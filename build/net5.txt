@@ -1,0 +1,39 @@
+
+=== wake_demo v4: Jarvis -> chime -> command -> PC + LED -> DOA ===
+say: "play some music" "stop the music" "make a picture" "tell me a joke"
+     "change the mood" "show me the weather" "start the demo"
+     "shut it down" "ask the model"
+
+AIC3104 output unmuted at 0 dB: ok
+i2s full duplex: ok
+  -> DOA idle (boot)
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakenet9l_tts1h8_Jarvis_3_0.627_0.632, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Jarvis, then a command right away
+  DOA 354 deg
+  DOA 326 deg
+  DOA 326 deg
+  DOA 326 deg
+  DOA 326 deg
+  DOA 220 deg
+  DOA 296 deg
+  DOA 326 deg
+  DOA 326 deg
+  DOA 210 deg
+  DOA 208 deg
+  DOA 208 deg
+  DOA 208 deg
+
+[ 67120 ms] *** "HI JARVIS" #1 ***
+[ 67790 ms] chime done
+[ 67941 ms] command mode open
+[ 68264 ms] listening for a command (8 s)
+[ 70045 ms] raw id=1 phrase=1 -> "play some music" -> cmd 1
+[ 70045 ms] -> PC  JARVIS 0001 1
+     <-     ACK 1
+  -> DOA idle (animation done)

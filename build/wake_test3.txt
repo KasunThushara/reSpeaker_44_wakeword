@@ -1,0 +1,196 @@
+
+=== wake_demo walle: Hi Walle -> chime -> action -> PC + LED -> DOA ===
+say "Hi Walle", then one of the 16 voice actions:
+  walk straight ahead / back up slowly / spin in circles / stop right there
+
+
+
+WiFi: joining <ssid>......
+volume: 70% (-3.0 dB, DAC 0x06) boot
+i2s full duplex: ok
+audio: ring 96000 bytes (ok)
+audio: listening on 9100
+audio tuning: AGCMAXGAIN=64, ASROUTGAIN=1.5, ASR on
+  -> DOA idle (boot)
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakenet9l_tts2h12_Hi,Wall,E or Hi,??????_3_0.580_0.585, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Hi Walle, then a command right away
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 355 deg
+  DOA 355 deg
+  DOA 356 deg
+  DOA 357 deg
+  DOA 357 deg
+  DOA 357 deg
+  DOA 357 deg
+  DOA 357 deg
+  DOA 357 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+  DOA 356 deg
+
+[ 37536 ms] *** "HI WALLE" #1 ***
+[ 38206 ms] chime done
+[ 38356 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 38683 ms] listening for a command (5 s)
+[ 43706 ms] no command - amber double blink
+[ 43707 ms] -> PC  JARVIS 0001 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 1
+  DOA  30 deg
+  DOA  30 deg
+
+[ 48067 ms] *** "HI WALLE" #2 ***
+[ 48736 ms] chime done
+[ 48886 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 49264 ms] listening for a command (5 s)
+[ 54249 ms] no command - amber double blink
+[ 54250 ms] -> PC  JARVIS 0002 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 2
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA 123 deg
+
+[ 60066 ms] *** "HI WALLE" #3 ***
+[ 60735 ms] chime done
+[ 60893 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 61240 ms] listening for a command (5 s)
+[ 66265 ms] no command - amber double blink
+[ 66266 ms] -> PC  JARVIS 0003 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 3
+  DOA 124 deg
+  DOA 146 deg
+  DOA 147 deg
+
+[ 69353 ms] *** "HI WALLE" #4 ***
+[ 70020 ms] chime done
+[ 70176 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 70550 ms] listening for a command (5 s)
+[ 75550 ms] no command - amber double blink
+[ 75551 ms] -> PC  JARVIS 0004 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 4
+  DOA 147 deg
+  DOA 147 deg
+  DOA 147 deg
+  DOA 147 deg
+  DOA 114 deg
+  DOA 113 deg
+
+[ 79612 ms] *** "HI WALLE" #5 ***
+[ 80280 ms] chime done
+[ 80431 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 80756 ms] listening for a command (5 s)
+[ 85769 ms] no command - amber double blink
+[ 85770 ms] -> PC  JARVIS 0005 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 5
+  DOA  17 deg
+  DOA  81 deg
+  DOA  92 deg
+  DOA  92 deg
+  DOA  58 deg
+  DOA  82 deg
+  DOA  83 deg
+  DOA  83 deg
+  DOA  83 deg
+  DOA  83 deg
+  DOA  83 deg
+  DOA  83 deg
+  DOA 144 deg
+  DOA 131 deg
+
+[ 94746 ms] *** "HI WALLE" #6 ***
+[ 95415 ms] chime done
+[ 95565 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 95923 ms] listening for a command (5 s)
+[100900 ms] no command - amber double blink
+[100901 ms] -> PC  JARVIS 0006 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 6
+  DOA  32 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA 112 deg
+
+[103746 ms] *** "HI WALLE" #7 ***
+[104415 ms] chime done
+[104565 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[104894 ms] listening for a command (5 s)
+[109916 ms] no command - amber double blink
+[109917 ms] -> PC  JARVIS 0007 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 7
+  DOA  30 deg
+  DOA  92 deg
+  DOA  93 deg
+
+[114082 ms] *** "HI WALLE" #8 ***
+[114750 ms] chime done
+[114900 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[115280 ms] listening for a command (5 s)
+[120280 ms] no command - amber double blink
+[120281 ms] -> PC  JARVIS 0008 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 8
+  DOA  30 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA  29 deg
+  DOA  29 deg
+  DOA  29 deg
+  DOA  29 deg
+  DOA  93 deg
+  DOA  94 deg
+  DOA  94 deg
+  DOA  94 deg
+  DOA  94 deg
+  DOA  95 deg
+
+[133672 ms] *** "HI WALLE" #9 ***
+[134340 ms] chime done
+[134490 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[134833 ms] listening for a command (5 s)
+[139856 ms] no command - amber double blink
+[139857 ms] -> PC  JARVIS 0009 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 9

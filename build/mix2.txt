@@ -1,0 +1,38 @@
+
+=== wake_demo v4: Jarvis -> chime -> command -> PC + LED -> DOA ===
+say: "play some music" "stop the music" "make a picture" "tell me a joke"
+     "change the mood" "show me the weather" "start the demo"
+     "shut it down" "ask the model"
+
+  -> DOA idle (boot)
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakenet9l_tts1h8_Jarvis_3_0.627_0.632, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Jarvis, then a command right away
+audio: volume request 70%
+volume: 70% (-3.0 dB, DAC 0x06) music
+  audio: 1 pkts, 0 underruns, 0 gaps, 0 stale
+  DOA  84 deg
+  DOA  84 deg
+  DOA  84 deg
+  DOA  84 deg
+  audio: 251 pkts, 0 underruns, 0 gaps, 0 stale
+audio: volume request 30%
+volume: 30% (-10.5 dB, DAC 0x15) listening
+  audio: 502 pkts, 0 underruns, 0 gaps, 0 stale
+audio: volume request 70%
+volume: 70% (-3.0 dB, DAC 0x06) music
+  DOA  84 deg
+  DOA   2 deg
+  audio: 752 pkts, 0 underruns, 0 gaps, 1 stale
+audio: volume request 70%
+volume: 70% (-3.0 dB, DAC 0x06) music
+  audio: 1002 pkts, 0 underruns, 0 gaps, 1 stale
+  DOA 358 deg
+  DOA 358 deg
+  DOA 358 deg
+audio: STOP

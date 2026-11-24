@@ -1,0 +1,22 @@
+[   40s] listening... wakes=0 (suppressed 0) heap=220116
+[   45s] listening... wakes=0 (suppressed 0) heap=220116
+
+*** "HI ESP" DETECTED  (#1) ***
+[   50s] listening... wakes=1 (suppressed 0) heap=220116
+
+*** "HI ESP" DETECTED  (#2) ***
+[   55s] listening... wakes=2 (suppressed 1) heap=220116
+
+*** "HI ESP" DETECTED  (#3) ***
+[   60s] listening... wakes=3 (suppressed 1) heap=220116
+
+*** "HI ESP" DETECTED  (#4) ***
+[   65s] listening... wakes=4 (suppressed 1) heap=220116
+
+*** "HI ESP" DETECTED  (#5) ***
+
+*** "HI ESP" DETECTED  (#6) ***
+[   70s] listening... wakes=6 (suppressed 1) heap=220116
+
+*** "HI ESP" DETECTED  (#7) ***
+[   75s] listening... wakes=7 (suppressed 1) heap=220116

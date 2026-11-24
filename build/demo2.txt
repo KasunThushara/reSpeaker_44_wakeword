@@ -1,0 +1,55 @@
+
+=== wake_demo v2: Hi ESP -> chime -> command -> animation -> DOA ===
+commands: red light | green light | blue light | rainbow
+AIC3104 output unmuted at 0 dB: ok
+i2s full duplex: ok
+  -> DOA idle (boot)
+ESP_SR: ok
+
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+
+*** "HI ESP" #1 ***
+  listening for a command...
+  command 1 (phrase 1)
+  -> DOA idle (animation done)
+  DOA  90 deg
+  DOA  90 deg
+
+*** "HI ESP" #2 ***
+  listening for a command...
+  command 2 (phrase 2)
+  -> DOA idle (animation done)
+  DOA 265 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA  93 deg
+
+*** "HI ESP" #3 ***
+  listening for a command...
+  command 3 (phrase 3)
+  -> DOA idle (animation done)
+  DOA 177 deg
+  DOA 177 deg
+
+*** "HI ESP" #4 ***
+  listening for a command...
+  command 2 (phrase 2)
+  -> DOA idle (animation done)
+  DOA 303 deg
+  DOA 178 deg
+  DOA 177 deg
+  DOA 177 deg
+  DOA 177 deg
+  DOA 179 deg
+  DOA  92 deg
+
+*** "HI ESP" #5 ***
+  listening for a command...
+  command 2 (phrase 2)
+  -> DOA idle (animation done)

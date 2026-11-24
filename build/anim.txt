@@ -1,0 +1,18 @@
+
+=== anim_bb: ball animation over software I2C (D13=SDA D14=SCL) ===
+probe 0x3C: ACK
+init done
+first full frame: 1056 ACKs 0 NAKs in 769 ms
+=== animation running: a ball bouncing inside a border ===
+  6 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total
+  19 fps, 0 NAKs total

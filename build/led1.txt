@@ -1,0 +1,94 @@
+
+=== led_probe (N1): WS2812 ring + DOA over I2C ===
+SDA=D4/GPIO5  SCL=D5/GPIO6  XMOS=0x2C
+waiting 2.5 s for the XVF3800 boot animation...
+XMOS firmware: 1.0.0
+  LED power rail: ON
+  brightness -> 150 (ok)
+  effect -> 3 (ok)
+  colour -> 0xFFFFFF (ok)
+colour readback 0xFFFFFF -> PASS
+
+--- sweep (watch the ring, ~2 s each) ---
+1) OFF
+  effect -> 0 (ok)
+2) SOLID RED
+  effect -> 3 (ok)
+  colour -> 0xFF0000 (ok)
+3) SOLID GREEN
+  colour -> 0x00FF00 (ok)
+4) SOLID BLUE
+  colour -> 0x0000FF (ok)
+5) BREATHING (teal)
+  effect -> 1 (ok)
+  colour -> 0x00FFFF (ok)
+6) RAINBOW
+  effect -> 2 (ok)
+7) RING
+  effect -> 5 (ok)
+8) DOA indicator (default idle) - talk to it
+  effect -> 4 (ok)
+  brightness -> 150 (ok)
+
+--- DOA polling: speak from different sides ---
+  expect the lit dot to follow your voice; SILENT when quiet
+DOA 319 deg | speech no 
+[18s] i2c failures so far: 0
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech no 
+DOA 319 deg | speech YES
+DOA  56 deg | speech YES
+DOA  67 deg | speech YES
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+[23s] i2c failures so far: 0
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech YES
+DOA  67 deg | speech YES
+DOA  67 deg | speech YES
+DOA  67 deg | speech no 
+[28s] i2c failures so far: 0
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 
+DOA  67 deg | speech no 

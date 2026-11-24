@@ -1,0 +1,11 @@
+
+=== display_ab: looking for the panel on J2 (D4/D5) and J6 (D2/D0) ===
+  J2  D4/D5 (shared with codec + XMOS)   3 ACK, 0x3C present
+*** PANEL ON J2  D4/D5 (shared with codec + XMOS) ***
+  @100 k init 17 ok / 0 nak | 0xA5 -> sent clean
+  @100 k frame 62 ok / 6 nak  (both frames sent)
+  @400 k init 16 ok / 1 nak | 0xA5 -> maybe lost
+  @400 k frame 68 ok / 0 nak  (both frames sent)
+=== entering 2 s on / 2 s off flash loop ===
+  flash round: 11 nak
+  flash round: 9 nak

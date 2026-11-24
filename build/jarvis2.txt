@@ -1,0 +1,42 @@
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+
+[ 27201 ms] *** "HI JARVIS" #1 ***
+[ 27871 ms] chime done
+[ 28022 ms] command mode open
+[ 28345 ms] listening for a command (8 s)
+[ 36346 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+
+[ 40807 ms] *** "HI JARVIS" #2 ***
+[ 41476 ms] chime done
+[ 41626 ms] command mode open
+[ 41951 ms] listening for a command (8 s)
+[ 49956 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  34 deg
+
+[ 51756 ms] *** "HI JARVIS" #3 ***
+[ 52426 ms] chime done
+[ 52576 ms] command mode open
+[ 52914 ms] listening for a command (8 s)
+[ 60916 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  55 deg
+
+[ 63366 ms] *** "HI JARVIS" #4 ***
+[ 64036 ms] chime done
+[ 64186 ms] command mode open
+[ 64510 ms] listening for a command (8 s)
+[ 68532 ms] raw id=1 phrase=1 -> "turn it red" -> cmd 1
+  -> DOA idle (animation done)
+  DOA 178 deg
+  DOA 178 deg
+  DOA  55 deg

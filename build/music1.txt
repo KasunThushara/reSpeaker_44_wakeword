@@ -1,0 +1,13 @@
+
+=== wake_demo v4: Jarvis -> chime -> command -> PC + LED -> DOA ===
+say: "play some music" "stop the music" "make a picture" "tell me a joke"
+     "change the mood" "show me the weather" "start the demo"
+     "shut it down" "ask the model"
+
+
+  DOA  62 deg
+  audio: 502 pkts, 0 underruns, 0 gaps, 1 stale
+  audio: 747 pkts, 0 underruns, 3 gaps, 1 stale
+  DOA  62 deg
+  DOA 177 deg
+  audio: 996 pkts, 0 underruns, 4 gaps, 2 stale

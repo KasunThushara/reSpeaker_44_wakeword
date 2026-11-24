@@ -1,0 +1,134 @@
+
+=== wake_demo walle: Hi Walle -> chime -> action -> PC + LED -> DOA ===
+say "Hi Walle", then one of the 8 voice actions:
+  go straight ahead / spin in circles / wave your hand / give me a hug
+
+WiFi: joining <ssid>....
+i2s full duplex: ok
+
+ESP_SR: ok
+ready - say Hi Walle, then a command right away
+  DOA 100 deg
+  DOA 100 deg
+  DOA 100 deg
+  DOA 100 deg
+  DOA 100 deg
+  DOA 100 deg
+  DOA 100 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA  30 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA 101 deg
+  DOA  78 deg
+  DOA  78 deg
+  DOA  78 deg
+  DOA  78 deg
+  DOA  78 deg
+  DOA  78 deg
+  DOA  78 deg
+  DOA 283 deg
+  DOA 281 deg
+  DOA 280 deg
+  DOA 280 deg
+  DOA  24 deg
+  DOA 281 deg
+  DOA 280 deg
+  DOA  24 deg
+  DOA  27 deg
+  DOA  27 deg
+  DOA  27 deg
+  DOA  27 deg
+  DOA  27 deg
+  DOA  27 deg
+  DOA  55 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  59 deg
+  DOA  36 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  52 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA 117 deg
+
+[155614 ms] *** "HI WALLE" #1 ***
+[156283 ms] chime done
+[156440 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[156761 ms] listening for a command (5 s)
+[158926 ms] raw id=1 phrase=1 -> "go straight ahead" -> cmd 1
+[158927 ms] -> PC  JARVIS 0001 1
+audio: volume request 100%
+     <-     ACK 1
+volume: 100% (-0.0 dB, DAC 0x00) music
+  -> DOA idle (animation done)
+  audio: 4 pkts, 0 underruns, 0 gaps, 0 stale
+audio: STOP
+  DOA 124 deg
+
+[165409 ms] *** "HI WALLE" #2 ***
+volume: 70% (-3.0 dB, DAC 0x06) chime
+volume: 100% (-0.0 dB, DAC 0x00) music
+[166081 ms] chime done
+[166235 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[166571 ms] listening for a command (5 s)
+[168450 ms] raw id=5 phrase=5 -> "do a dance" -> cmd 19
+[168450 ms] -> PC  JARVIS 0002 19
+audio: volume request 100%
+     <-     ACK 2
+volume: 100% (-0.0 dB, DAC 0x00) music
+  -> DOA idle (animation done)
+  audio: 57 pkts, 0 underruns, 2 gaps, 0 stale
+  DOA 124 deg
+audio: STOP
+  DOA 124 deg
+  DOA 124 deg
+  DOA 282 deg
+  DOA 125 deg
+
+[174170 ms] *** "HI WALLE" #3 ***
+volume: 70% (-3.0 dB, DAC 0x06) chime
+volume: 100% (-0.0 dB, DAC 0x00) music
+[174848 ms] chime done
+[174998 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[175340 ms] listening for a command (5 s)

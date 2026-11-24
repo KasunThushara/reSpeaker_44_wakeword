@@ -1,0 +1,36 @@
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+  DOA  55 deg
+
+[129097 ms] *** "HI JARVIS" #5 ***
+[129765 ms] chime done
+[129921 ms] command mode open
+[130239 ms] listening for a command (8 s)
+[138240 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  28 deg
+
+[142281 ms] *** "HI JARVIS" #6 ***
+[142950 ms] chime done
+[143100 ms] command mode open
+[143425 ms] listening for a command (8 s)
+[151430 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  57 deg
+  DOA  57 deg
+  DOA  57 deg
+  DOA  57 deg
+  DOA 109 deg
+
+[156681 ms] *** "HI JARVIS" #7 ***
+[157350 ms] chime done
+[157500 ms] command mode open
+[157825 ms] listening for a command (8 s)

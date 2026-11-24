@@ -1,0 +1,35 @@
+[395968 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA 179 deg
+  DOA 179 deg
+  DOA 179 deg
+  DOA 179 deg
+  DOA  59 deg
+  DOA  17 deg
+  DOA  17 deg
+
+[442189 ms] *** "HI WALLE" #8 ***
+[442857 ms] chime done
+[443013 ms] command mode open
+[443331 ms] listening for a command (8 s)
+[451332 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+
+[461043 ms] *** "HI WALLE" #9 ***

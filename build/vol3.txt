@@ -1,0 +1,24 @@
+  DOA  90 deg
+A  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  audio: 1 pkts, 0 underruns, 0 gaps, 0 stale
+volume: -10.5 dB (DAC 0x15, analog +0 dB) music 30%
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+audio: STOP
+  DOA 179 deg
+  DOA 251 deg
+  DOA 251 deg
+  audio: 994 pkts, 0 underruns, 0 gaps, 1 stale
+volume: -10.5 dB (DAC 0x15, analog +0 dB) music 30%
+  audio: 1244 pkts, 0 underruns, 0 gaps, 1 stale
+  DOA 251 deg
+audio: STOP
+volume: -0.0 dB (DAC 0x00, analog +0 dB) idle
+  DOA 251 deg
+  DOA 251 deg

@@ -1,0 +1,7 @@
+{
+  "_comment": "WALL-E demo. esp_ip is a fallback; it is refreshed from every JARVIS packet.",
+  "esp_ip": "192.168.7.205",
+  "weather_lat": 22.5431,
+  "weather_lon": 114.0579,
+  "weather_city": "Shenzhen"
+}

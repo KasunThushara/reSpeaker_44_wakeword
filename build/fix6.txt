@@ -1,0 +1,40 @@
+
+=== wake_demo v3: Hi ESP -> chime -> command -> animation -> DOA ===
+say: "turn it red" "switch to green" "paint it blue" "make a rainbow"
+     "all lights on" "turn it off" "slow motion" "spin the ring"
+AIC3104 output unmuted at 0 dB: ok
+ESP_SR: ok
+ready - say Hi ESP, then a command right away
+  DOA  98 deg
+
+[ 10101 ms] *** "HI ESP" #1 ***
+[ 10771 ms] chime done
+[ 10928 ms] command mode open
+[ 11259 ms] listening for a command (8 s)
+[ 12806 ms] raw id=8 phrase=8 -> "spin the ring" -> cmd 8
+  -> DOA idle (animation done)
+  DOA 270 deg
+  DOA 270 deg
+  DOA 270 deg
+  DOA 270 deg
+
+[ 18412 ms] *** "HI ESP" #2 ***
+[ 19081 ms] chime done
+[ 19232 ms] command mode open
+[ 19556 ms] listening for a command (8 s)
+[ 21663 ms] raw id=8 phrase=8 -> "spin the ring" -> cmd 8
+  -> DOA idle (animation done)
+  DOA 270 deg
+  DOA 270 deg
+
+[ 29813 ms] *** "HI ESP" #3 ***
+[ 30481 ms] chime done
+[ 30637 ms] command mode open
+[ 30955 ms] listening for a command (8 s)
+[ 33051 ms] raw id=8 phrase=8 -> "spin the ring" -> cmd 8
+  -> DOA idle (animation done)
+  DOA 270 deg
+  DOA 270 deg
+  DOA 270 deg
+  DOA   1 deg
+  DOA 276 deg

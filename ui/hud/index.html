@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A.R.C. // Assistant HUD</title>
+<style>
+  :root{
+    --bg:#04090d;
+    --bg2:#07141b;
+    --panel:rgba(9,26,35,.72);
+    --line:rgba(95,230,255,.22);
+    --line-soft:rgba(95,230,255,.10);
+    --cyan:#5fe6ff;
+    --cyan-dim:#2a8ca3;
+    --gold:#f7c977;
+    --warn:#ff9d5c;
+    --text:#bfe9f3;
+    --muted:#6b9aa8;
+    --font:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 700px at 50% 38%, #0d2b36 0%, #07141b 45%, #04090d 100%);
+    color:var(--text);
+    font-family:var(--font);
+    font-size:13px;
+    letter-spacing:.04em;
+    overflow:hidden;
+  }
+
+  /* ---------- background layers ---------- */
+  .grid-bg{
+    position:fixed; inset:0; pointer-events:none;
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(circle at 50% 45%, #000 0%, transparent 78%);
+    -webkit-mask-image:radial-gradient(circle at 50% 45%, #000 0%, transparent 78%);
+    opacity:.55;
+  }
+  .scanlines{
+    position:fixed; inset:0; pointer-events:none; opacity:.25;
+    background:repeating-linear-gradient(180deg, rgba(95,230,255,.05) 0 1px, transparent 1px 3px);
+  }
+  .vignette{
+    position:fixed; inset:0; pointer-events:none;
+    background:radial-gradient(circle at 50% 45%, transparent 40%, rgba(0,0,0,.55) 100%);
+  }
+
+  /* ---------- shell ---------- */
+  .hud{
+    position:relative; z-index:2;
+    height:100%;
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    gap:14px;
+    padding:18px 22px 14px;
+  }
+
+  .topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom:1px solid var(--line);
+    padding-bottom:10px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    color:var(--cyan); font-size:12px; letter-spacing:.28em;
+    text-transform:uppercase;
+  }
+  .brand .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--cyan);
+    box-shadow:0 0 10px var(--cyan),0 0 22px rgba(95,230,255,.55);
+    animation:blip 2.4s ease-in-out infinite;
+  }
+  .brand b{color:var(--gold); font-weight:600; letter-spacing:.28em}
+  .top-right{display:flex; align-items:center; gap:18px; color:var(--muted); font-size:11px}
+  .clock{color:var(--cyan); font-size:16px; letter-spacing:.16em}
+  .sig{display:flex; align-items:flex-end; gap:2px; height:12px}
+  .sig i{width:3px; background:var(--cyan); opacity:.85}
+  .sig i:nth-child(1){height:4px}
+  .sig i:nth-child(2){height:7px}
+  .sig i:nth-child(3){height:10px}
+  .sig i:nth-child(4){height:12px; opacity:.35}
+
+  /* ---------- three columns ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:minmax(210px,1fr) minmax(320px,1.55fr) minmax(220px,1fr);
+    gap:16px;
+    min-height:0;
+  }
+  .col{display:flex; flex-direction:column; gap:14px; min-height:0}
+
+  .panel{
+    background:linear-gradient(180deg, rgba(12,34,44,.78), rgba(6,18,24,.72));
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:12px 14px;
+    position:relative;
+    box-shadow:inset 0 0 22px rgba(95,230,255,.05);
+  }
+  /* corner ticks */
+  .panel::before,.panel::after{
+    content:""; position:absolute; width:9px; height:9px;
+    border:1px solid var(--cyan); opacity:.6;
+  }
+  .panel::before{top:-1px; left:-1px; border-right:0; border-bottom:0}
+  .panel::after{bottom:-1px; right:-1px; border-left:0; border-top:0}
+
+  .panel h2{
+    margin:0 0 10px;
+    font-size:10px; letter-spacing:.26em; text-transform:uppercase;
+    color:var(--cyan-dim); font-weight:500;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .panel h2 span{color:var(--gold); letter-spacing:.1em; font-size:10px}
+
+  .row{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:5px 0; border-bottom:1px dashed rgba(95,230,255,.10);
+    font-size:12px;
+  }
+  .row:last-child{border-bottom:0}
+  .row .k{color:var(--muted)}
+  .row .v{color:var(--text)}
+  .ok{color:var(--cyan)}
+  .bad{color:var(--warn)}
+  .gold{color:var(--gold)}
+
+  /* mic level */
+  .mic{
+    display:flex; align-items:stretch; gap:3px; height:58px;
+    margin:6px 0 10px; padding:7px 8px;
+    border:1px solid var(--line-soft);
+  }
+  .mic i{
+    flex:1; border-radius:1px;
+    background:linear-gradient(180deg,var(--cyan),rgba(95,230,255,.25));
+    transform-origin:bottom center;
+    transform:scaleY(.55);
+    transition:transform .09s linear;
+  }
+
+  /* ---------- center: head ---------- */
+  .center{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    position:relative; min-height:0;
+  }
+  .head-wrap{
+    position:relative;
+    width:min(54vh, 430px);
+    aspect-ratio:240/268;
+    display:grid; place-items:center;
+  }
+  .aura{
+    position:absolute; inset:6%;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(95,230,255,.20), rgba(95,230,255,.05) 45%, transparent 70%);
+    filter:blur(6px);
+    animation:breathe 4.5s ease-in-out infinite;
+  }
+  .head-wrap svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
+  .ring-slow{animation:spin 26s linear infinite; transform-origin:120px 134px}
+  .ring-fast{animation:spin 14s linear infinite reverse; transform-origin:120px 134px}
+
+  .eye{filter:url(#glow); animation:eyePulse 3.2s ease-in-out infinite}
+  .eye.right{animation-delay:.4s}
+
+  .scanbeam{
+    animation:scan 5.4s cubic-bezier(.5,0,.5,1) infinite;
+  }
+
+  .caption{
+    margin-top:6px;
+    font-size:11px; letter-spacing:.42em; text-transform:uppercase;
+    color:var(--cyan);
+    text-shadow:0 0 12px rgba(95,230,255,.7);
+    min-height:16px;
+  }
+  .sub{
+    margin-top:6px; font-size:10px; letter-spacing:.16em; color:var(--muted);
+  }
+
+  /* ---------- notes ---------- */
+  .note{
+    padding:7px 0; border-bottom:1px dashed rgba(95,230,255,.1);
+    display:flex; gap:9px; align-items:flex-start;
+  }
+  .note:last-child{border:0}
+  .note .tick{
+    margin-top:2px; width:6px; height:6px; flex:none;
+    background:var(--gold); box-shadow:0 0 8px rgba(247,201,119,.7);
+  }
+  .note p{margin:0; font-size:12px; line-height:1.45; color:var(--text)}
+  .note small{display:block; color:var(--muted); font-size:10px; margin-top:2px; letter-spacing:.1em}
+
+  /* ---------- footer ---------- */
+  .statusbar{
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:1px solid var(--line);
+    padding-top:9px;
+    font-size:10px; letter-spacing:.18em; color:var(--muted);
+    text-transform:uppercase;
+  }
+  .statusbar .mid{color:var(--cyan-dim)}
+  .dotline{display:flex; gap:6px; align-items:center}
+  .dotline i{width:5px;height:5px;border-radius:50%;background:var(--cyan);opacity:.75}
+
+  /* ---------- keyframes ---------- */
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes blip{0%,100%{opacity:1}50%{opacity:.35}}
+  @keyframes breathe{0%,100%{opacity:.55; transform:scale(.98)}50%{opacity:.95; transform:scale(1.03)}}
+  @keyframes eyePulse{0%,100%{opacity:.82}48%{opacity:1}52%{opacity:.9}}
+  @keyframes scan{
+    0%{transform:translateY(0px); opacity:0}
+    12%{opacity:.85}
+    88%{opacity:.85}
+    100%{transform:translateY(230px); opacity:0}
+  }
+  @keyframes meter{
+    0%{height:10%}
+    25%{height:62%}
+    50%{height:28%}
+    75%{height:88%}
+    100%{height:34%}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    body{overflow:auto}
+    .hud{height:auto; min-height:100%}
+    .grid{grid-template-columns:1fr; grid-template-rows:auto auto auto}
+    .center{order:-1}
+    .head-wrap{width:min(60vw,300px)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important}
+  }
+</style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <main class="hud">
+    <header class="topbar">
+      <div class="brand"><span class="dot"></span> A.R.C. <b>// HOME ASSISTANT</b></div>
+      <div class="top-right">
+        <span>LOCAL · 0 CLOUD</span>
+        <span class="sig"><i></i><i></i><i></i><i></i></span>
+        <span class="clock" id="clock">--:--</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <!-- LEFT -->
+      <aside class="col">
+        <div class="panel">
+          <h2>Audio Front End <span>XVF3800</span></h2>
+          <div class="mic" id="mic">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="row"><span class="k">Wake word</span><span class="v ok">HI ESP</span></div>
+          <div class="row"><span class="k">Confidence</span><span class="v gold">0.93</span></div>
+          <div class="row"><span class="k">Speaker</span><span class="v ok">VERIFIED · 0.91</span></div>
+          <div class="row"><span class="k">Noise floor</span><span class="v">-52 dB</span></div>
+        </div>
+
+        <div class="panel">
+          <h2>Link</h2>
+          <div class="row"><span class="k">S3 → P4</span><span class="v ok">SPI 12 Mbps</span></div>
+          <div class="row"><span class="k">HA server</span><span class="v ok">CONNECTED</span></div>
+          <div class="row"><span class="k">BLE</span><span class="v">2 peers</span></div>
+          <div class="row"><span class="k">Uptime</span><span class="v" id="uptime">00:00:00</span></div>
+        </div>
+      </aside>
+
+      <!-- CENTER -->
+      <section class="center">
+        <div class="head-wrap">
+          <div class="aura"></div>
+
+          <svg viewBox="0 0 240 268" aria-label="Assistant head">
+            <defs>
+              <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#12303c"/>
+                <stop offset=".55" stop-color="#0a1f28"/>
+                <stop offset="1" stop-color="#061219"/>
+              </linearGradient>
+              <linearGradient id="plateHi" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2b6d80"/>
+                <stop offset=".5" stop-color="#12333f"/>
+                <stop offset="1" stop-color="#0a2129"/>
+              </linearGradient>
+              <linearGradient id="eyeGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#bff7ff"/>
+                <stop offset=".5" stop-color="#5fe6ff"/>
+                <stop offset="1" stop-color="#9ff3ff"/>
+              </linearGradient>
+              <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="4" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <linearGradient id="sweepGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#5fe6ff" stop-opacity="0"/>
+                <stop offset=".5" stop-color="#5fe6ff" stop-opacity=".55"/>
+                <stop offset="1" stop-color="#5fe6ff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <!-- orbiting rings -->
+            <g class="ring-slow" fill="none" stroke="#5fe6ff" stroke-opacity=".30">
+              <circle cx="120" cy="134" r="104" stroke-width="1" stroke-dasharray="3 9"/>
+            </g>
+            <g class="ring-fast" fill="none" stroke="#f7c977" stroke-opacity=".35">
+              <circle cx="120" cy="134" r="92" stroke-width="1" stroke-dasharray="26 14 4 14"/>
+            </g>
+
+            <!-- faceplate geometry reused as a clip for the sweep -->
+            <clipPath id="faceClip">
+              <path d="M120 38
+                       C 86 38, 62 62, 60 96
+                       L 57 128
+                       C 55 154, 64 178, 82 196
+                       L 104 216
+                       C 113 224, 127 224, 136 216
+                       L 158 196
+                       C 176 178, 185 154, 183 128
+                       L 180 96
+                       C 178 62, 154 38, 120 38 Z"/>
+            </clipPath>
+
+            <!-- shoulders -->
+            <path d="M52 252 C 78 236, 162 236, 188 252 L 196 266 L 44 266 Z"
+                  fill="#0a1f28" stroke="#1d4653" stroke-width="1"/>
+            <path d="M64 250 C 88 240, 152 240, 176 250" fill="none"
+                  stroke="#2f7487" stroke-opacity=".45" stroke-width="1"/>
+
+            <!-- neck -->
+            <path d="M96 218 L96 246 Q120 258 144 246 L144 218 Z" fill="#08171d" stroke="#1d4653" stroke-width="1"/>
+            <path d="M104 224 v24 M120 226 v26 M136 224 v24" stroke="#1d4653" stroke-width="1" stroke-opacity=".8"/>
+
+            <!-- helmet shell -->
+            <path d="M120 24
+                     C 74 24, 46 56, 44 98
+                     L 40 134
+                     C 38 162, 48 188, 68 208
+                     L 96 234
+                     C 108 244, 132 244, 144 234
+                     L 172 208
+                     C 192 188, 202 162, 200 134
+                     L 196 98
+                     C 194 56, 166 24, 120 24 Z"
+                  fill="url(#plateHi)" stroke="#2f7487" stroke-width="1.6"/>
+
+            <!-- top crest -->
+            <path d="M104 26 L120 12 L136 26 Z" fill="#0d2831" stroke="#3d8ea4" stroke-opacity=".6"/>
+
+            <!-- face plate -->
+            <path d="M120 38
+                     C 86 38, 62 62, 60 96
+                     L 57 128
+                     C 55 154, 64 178, 82 196
+                     L 104 216
+                     C 113 224, 127 224, 136 216
+                     L 158 196
+                     C 176 178, 185 154, 183 128
+                     L 180 96
+                     C 178 62, 154 38, 120 38 Z"
+                  fill="url(#plate)" stroke="#3d8ea4" stroke-opacity=".7" stroke-width="1.2"/>
+
+            <!-- visor brow -->
+            <path d="M64 98 L120 84 L176 98" fill="none" stroke="#3d8ea4" stroke-opacity=".55" stroke-width="1.2"/>
+            <path d="M120 38 L120 84" stroke="#3d8ea4" stroke-opacity=".3" stroke-width="1"/>
+
+            <!-- eyes: wide angled visor slits -->
+            <g class="eye">
+              <path d="M70 106 L110 97 L112 116 L72 119 Z" fill="url(#eyeGrad)"/>
+              <path d="M170 106 L130 97 L128 116 L168 119 Z" fill="url(#eyeGrad)"/>
+            </g>
+            <g class="eye right">
+              <path d="M74 108 L107 100" stroke="#eafcff" stroke-opacity=".85" stroke-width="1.5"/>
+              <path d="M166 108 L133 100" stroke="#eafcff" stroke-opacity=".85" stroke-width="1.5"/>
+            </g>
+
+            <!-- cheek plates -->
+            <path d="M62 132 L86 126 L81 162 L68 150 Z" fill="#0b232c" stroke="#2f7487" stroke-opacity=".55"/>
+            <path d="M178 132 L154 126 L159 162 L172 150 Z" fill="#0b232c" stroke="#2f7487" stroke-opacity=".55"/>
+
+            <!-- jaw vents -->
+            <path d="M96 164 h48" stroke="#3d8ea4" stroke-opacity=".6" stroke-width="1.2"/>
+            <path d="M100 171 h40" stroke="#5fe6ff" stroke-opacity=".35" stroke-width="1"/>
+            <path d="M104 178 h32" stroke="#5fe6ff" stroke-opacity=".24" stroke-width="1"/>
+            <path d="M108 185 h24" stroke="#5fe6ff" stroke-opacity=".16" stroke-width="1"/>
+
+            <!-- ear pods -->
+            <circle cx="45" cy="132" r="10" fill="#0a1f28" stroke="#3d8ea4" stroke-opacity=".6"/>
+            <circle cx="195" cy="132" r="10" fill="#0a1f28" stroke="#3d8ea4" stroke-opacity=".6"/>
+            <circle cx="45" cy="132" r="3" fill="#5fe6ff" opacity=".65"/>
+            <circle cx="195" cy="132" r="3" fill="#5fe6ff" opacity=".65"/>
+
+            <!-- sweep line, clipped to the face plate -->
+            <g clip-path="url(#faceClip)" opacity=".5">
+              <rect class="scanbeam" x="50" y="0" width="140" height="10"
+                    fill="url(#sweepGrad)"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="caption" id="state">LISTENING</div>
+        <div class="sub">24.0 °C · 41 % RH · AIR OK</div>
+      </section>
+
+      <!-- RIGHT -->
+      <aside class="col">
+        <div class="panel">
+          <h2>Notes <span>3</span></h2>
+          <div class="note">
+            <span class="tick"></span>
+            <div><p>Order the 2.0 mm JST leads</p><small>ADDED TODAY</small></div>
+          </div>
+          <div class="note">
+            <span class="tick"></span>
+            <div><p>Water the balcony plants</p><small>DAILY · 18:30</small></div>
+          </div>
+          <div class="note">
+            <span class="tick"></span>
+            <div><p>Send the demo clip to Kasun</p><small>DUE FRIDAY</small></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Today</h2>
+          <div class="row"><span class="k">10:30</span><span class="v">Standup</span></div>
+          <div class="row"><span class="k">14:00</span><span class="v">Panel vendor call</span></div>
+          <div class="row"><span class="k">18:30</span><span class="v">Lights on · scene</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="statusbar">
+      <span class="dotline"><i></i><i></i><i></i> SYSTEM NOMINAL</span>
+      <span class="mid">VOICEPRINT ON DEVICE · NOT UPLOADED</span>
+      <span id="fps">UI 30 FPS</span>
+    </footer>
+  </main>
+
+<script>
+  // clock
+  const clock = document.getElementById('clock');
+  const uptime = document.getElementById('uptime');
+  const t0 = Date.now();
+  function tick(){
+    const d = new Date();
+    clock.textContent = String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
+    const s = Math.floor((Date.now() - t0) / 1000);
+    uptime.textContent = [s/3600, (s%3600)/60, s%60].map(n => String(Math.floor(n)).padStart(2,'0')).join(':');
+  }
+  tick(); setInterval(tick, 1000);
+
+  // mic bars: add jitter so it looks live
+  const bars = [...document.querySelectorAll('#mic i')];
+  setInterval(() => {
+    bars.forEach((b, i) => {
+      const base = 0.10 + Math.abs(Math.sin((Date.now()/380) + i * 0.7)) * 0.85;
+      b.style.transform = 'scaleY(' + base.toFixed(2) + ')';
+      b.style.opacity = 0.45 + base * 0.6;
+    });
+  }, 130);
+
+  // state machine demo
+  const states = ['LISTENING', 'THINKING', 'SPEAKING'];
+  const el = document.getElementById('state');
+  let i = 0;
+  setInterval(() => { i = (i + 1) % states.length; el.textContent = states[i]; }, 6000);
+</script>
+</body>
+</html>

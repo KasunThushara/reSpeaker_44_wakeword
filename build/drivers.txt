@@ -1,0 +1,27 @@
+
+=== display_drivers: panel present? NAK - check wiring ===
+Each variant runs ~20 s: hardware all-on, then two frames.
+If ANY variant lights the panel, note which one.
+
+>>> VARIANT: SSD1306 (0x8D 0x14)  (WATCH THE PANEL NOW)
+    18 ok, 0 nak
+
+    B: 0xFF frame via GDDRAM    65 ok, 3 nak
+    C: 0xAA checker frame    16 ok, 52 nak
+
+>>> VARIANT: SSD1309 (0xFD 0x12 + 0x8D 0x14)  (WATCH THE PANEL NOW)
+    0 ok, 20 nak
+    A: 0xA5 hardware all-on - hold 8 s
+    B: 0xFF frame via GDDRAM    0 ok, 68 nak
+    C: 0xAA checker frame    0 ok, 68 nak
+
+>>> VARIANT: SH1106 (0xAD 0x8B), column offset 2  (WATCH THE PANEL NOW)
+    0 ok, 17 nak
+    A: 0xA5 hardware all-on - hold 8 s
+    B: 0xFF frame via pages    0 ok, 88 nak
+    C: 0xAA checker frame    0 ok, 88 nak
+
+>>> VARIANT: SH1106 (0xAD 0x8B), column offset 0  (WATCH THE PANEL NOW)
+    0 ok, 17 nak
+    A: 0xA5 hardware all-on - hold 8 s
+    B: 0xFF frame via pages    0 ok, 88 nak

@@ -1,0 +1,83 @@
+
+=== wake_demo walle: Hi Walle -> chime -> action -> PC + LED -> DOA ===
+say "Hi Walle", then one of the 8 voice actions:
+  go straight ahead / spin in circles / wave your hand / give me a hug
+
+WiFi: joining <ssid>.....
+i2s full duplex: ok
+
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Hi Walle, then a command right away
+  DOA 175 deg
+  DOA 175 deg
+  DOA 175 deg
+  DOA 106 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  91 deg
+
+[ 32550 ms] *** "HI WALLE" #1 ***
+[ 33220 ms] chime done
+[ 33370 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 33697 ms] listening for a command (6.5 s)
+[ 35826 ms] raw id=35 phrase=35 -> "play hide and seek" -> cmd 35
+[ 35827 ms] -> PC  JARVIS 0001 35
+  -> DOA idle (done - no ACK from PC)
+  DOA  94 deg
+[ 38330 ms] no ACK for seq 1
+  DOA  94 deg
+  DOA  94 deg
+  DOA  94 deg
+  DOA  95 deg
+
+[ 46755 ms] *** "HI WALLE" #2 ***
+volume: 70% (-3.0 dB, DAC 0x06) chime
+volume: 30% (-10.5 dB, DAC 0x15) music
+[ 47433 ms] chime done
+[ 47583 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 47902 ms] listening for a command (6.5 s)
+[ 54404 ms] no command - amber double blink
+[ 54405 ms] -> PC  JARVIS 0002 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+[ 56907 ms] no ACK for seq 2
+  DOA 109 deg
+  DOA 109 deg
+
+[ 62252 ms] *** "HI WALLE" #3 ***
+[ 62919 ms] chime done
+[ 63075 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 63414 ms] listening for a command (6.5 s)
+[ 65886 ms] raw id=35 phrase=35 -> "play hide and seek" -> cmd 35
+[ 65886 ms] -> PC  JARVIS 0003 35
+  -> DOA idle (done - no ACK from PC)
+  DOA 110 deg
+[ 68387 ms] no ACK for seq 3
+  DOA 110 deg
+  DOA 110 deg
+  DOA 110 deg
+  DOA 110 deg
+  DOA  82 deg
+  DOA  82 deg
+  DOA  82 deg
+  DOA  82 deg
+  DOA  63 deg
+  DOA  56 deg
+  DOA  56 deg
+
+[ 82920 ms] *** "HI WALLE" #4 ***
+volume: 70% (-3.0 dB, DAC 0x06) chime
+volume: 30% (-10.5 dB, DAC 0x15) music
+[ 83598 ms] chime done
+[ 83748 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[ 84093 ms] listening for a command (6.5 s)

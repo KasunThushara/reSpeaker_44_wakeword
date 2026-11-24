@@ -1,0 +1,57 @@
+
+=== wake_demo v3: Hi ESP -> chime -> command -> animation -> DOA ===
+say: "turn it red" "switch to green" "paint it blue" "make a rainbow"
+     "all lights on" "turn it off" "slow motion"/"calm down" "spin the ring"
+AIC3104 output unmuted at 0 dB: ok
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Hi ESP, then a command right away
+  DOA 155 deg
+  DOA 155 deg
+  DOA 182 deg
+
+[  9636 ms] *** "HI ESP" #1 ***
+[ 10306 ms] chime done
+[ 10463 ms] command mode open
+[ 10982 ms] listening for a command (8 s)
+[ 12617 ms] raw id=8 phrase=8 -> "calm down" -> cmd 7
+  -> DOA idle (animation done)
+  DOA 257 deg
+  DOA 183 deg
+
+[ 17918 ms] *** "HI ESP" #2 ***
+[ 18586 ms] chime done
+[ 18737 ms] command mode open
+[ 19247 ms] listening for a command (8 s)
+[ 27251 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 344 deg
+  DOA 344 deg
+  DOA  71 deg
+  DOA  71 deg
+  DOA  71 deg
+  DOA  71 deg
+  DOA  71 deg
+  DOA 182 deg
+  DOA 182 deg
+
+[ 37371 ms] *** "HI ESP" #3 ***
+[ 38041 ms] chime done
+[ 38191 ms] command mode open
+[ 38703 ms] listening for a command (8 s)
+[ 41326 ms] raw id=8 phrase=8 -> "calm down" -> cmd 7
+  -> DOA idle (animation done)
+  DOA 182 deg
+  DOA  72 deg
+  DOA 177 deg
+
+[ 47527 ms] *** "HI ESP" #4 ***
+[ 48196 ms] chime done
+[ 48346 ms] command mode open
+[ 48871 ms] listening for a command (8 s)
+[ 56876 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  71 deg

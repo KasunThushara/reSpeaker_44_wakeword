@@ -1,0 +1,41 @@
+  DOA 247 deg
+
+[ 47800 ms] *** "HI JARVIS" #1 ***
+[ 48470 ms] chime done
+[ 48620 ms] command mode open
+[ 48945 ms] listening for a command (8 s)
+[ 51051 ms] raw id=1 phrase=1 -> "play some music" -> cmd 1
+[ 51052 ms] -> PC  JARVIS 0001 1
+     <-     ACK 1
+  -> DOA idle (animation done)
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+
+[ 56126 ms] *** "HI JARVIS" #2 ***
+[ 56794 ms] chime done
+[ 56945 ms] command mode open
+[ 57270 ms] listening for a command (8 s)
+[ 58486 ms] raw id=2 phrase=2 -> "stop the music" -> cmd 2
+[ 58487 ms] -> PC  JARVIS 0002 2
+     <-     ACK 2
+  -> DOA idle (animation done)
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  33 deg
+  DOA  87 deg
+  DOA  55 deg
+  DOA  33 deg
+  DOA  43 deg
+  DOA  89 deg
+
+[ 90325 ms] *** "HI JARVIS" #3 ***
+[ 90994 ms] chime done
+[ 91144 ms] command mode open
+[ 91468 ms] listening for a command (8 s)
+[ 92656 ms] raw id=4 phrase=4 -> "tell me a joke" -> cmd 4
+[ 92656 ms] -> PC  JARVIS 0003 4
+     <-     ACK 3
+  -> DOA idle (animation done)

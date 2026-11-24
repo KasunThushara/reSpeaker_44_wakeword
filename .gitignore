@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------- ESP32 builds
+# app/bootloader/partition/model images, maps and merged images
+firmware/*/build/
+build/*/
+build/*.bin
+!build/srmodels_*.bin
+build/*.elf
+build/*.map
+build/*.merged.bin
+build/hiwalle_x/
+build/models_*/
+
+# ---------------------------------------------------------------- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------- runtime junk
+pc_brain/mix_request.json
+pc_brain/tts_*.wav
+pc_brain/tts.wav
+pc_brain_walle/mix_request.json
+pc_brain_walle/tts_*.wav
+build/*.wav
+build/*.raw
+
+# ---------------------------------------------------------------- OS / editors
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# ---------------------------------------------------------------- local stubs
+# Empty 0-byte files left at the repo root while extracting the character page.
+# They are kept on disk but are not part of the project (a blank root
+# index.html would also shadow GitHub Pages).
+/index.html
+/walle-overlay.css
+
+# Unattributed legacy music (no entry in pc_brain/ui/assets/CREDITS.txt).
+# Kept locally for the old JARVIS demo; do not publish it without a licence.
+pc_brain/ui/assets/music/marvel.mp3

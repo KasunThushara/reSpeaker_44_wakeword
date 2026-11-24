@@ -1,0 +1,167 @@
+      frame 0xFF via GDDRAM: 70 ok, 0 nak
+=== ROUND END ===
+code 2 = address NACK (device silent), 4 = bus/arbitration, 5 = timeout
+
+--- rescan (unplug the panel now if you want to test) ---
+[ 57851 ms] J2  SDA=D4/GPIO5  SCL=D5/GPIO6   (shared: 0x18 codec, 0x2C XMOS)
+      0x08 ACK
+      0x0D ACK
+      0x0E ACK
+      0x0F ACK
+      ... 112 ACKs total  <- FLOATING BUS, no device here
+      panel on J2
+
+=== ROUND: clock A/B ===
+
+--- 100 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 70 ok, 0 nak
+
+--- 400 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 70 ok, 0 nak
+=== ROUND END ===
+code 2 = address NACK (device silent), 4 = bus/arbitration, 5 = timeout
+
+--- rescan (unplug the panel now if you want to test) ---
+[ 91389 ms] J2  SDA=D4/GPIO5  SCL=D5/GPIO6   (shared: 0x18 codec, 0x2C XMOS)
+      0x18 ACK <- TLV320 codec (board audio)
+      0x2C ACK <- XMOS control (XVF3800)
+      0x3C ACK <- SSD1306/SH1106 OLED
+[ 91421 ms] J6  SDA=D2/GPIO3  SCL=D0/GPIO1   (free pads, nothing else attached)
+      0x08 ACK
+      0x09 ACK
+      0x0A ACK
+      0x0B ACK
+      0x0C ACK
+      0x0D ACK
+      0x0E ACK
+      0x0F ACK
+      ... 112 ACKs total  <- FLOATING BUS, no device here
+      panel on J2
+
+=== ROUND: clock A/B ===
+
+--- 100 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 69 ok, 1 nak   codes: [4]=1
+
+--- 400 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 70 ok, 0 nak
+=== ROUND END ===
+code 2 = address NACK (device silent), 4 = bus/arbitration, 5 = timeout
+
+--- rescan (unplug the panel now if you want to test) ---
+[111468 ms] J2  SDA=D4/GPIO5  SCL=D5/GPIO6   (shared: 0x18 codec, 0x2C XMOS)
+      0x18 ACK <- TLV320 codec (board audio)
+      0x2C ACK <- XMOS control (XVF3800)
+      0x3C ACK <- SSD1306/SH1106 OLED
+[111500 ms] J6  SDA=D2/GPIO3  SCL=D0/GPIO1   (free pads, nothing else attached)
+      0x08 ACK
+      0x09 ACK
+      0x0A ACK
+      0x0B ACK
+      0x0C ACK
+      0x0D ACK
+      0x0E ACK
+      0x0F ACK
+      ... 112 ACKs total  <- FLOATING BUS, no device here
+      panel on J2
+
+=== ROUND: clock A/B ===
+
+--- 100 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 70 ok, 0 nak
+
+--- 400 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 70 ok, 0 nak
+=== ROUND END ===
+code 2 = address NACK (device silent), 4 = bus/arbitration, 5 = timeout
+
+--- rescan (unplug the panel now if you want to test) ---
+[131538 ms] J2  SDA=D4/GPIO5  SCL=D5/GPIO6   (shared: 0x18 codec, 0x2C XMOS)
+      0x18 ACK <- TLV320 codec (board audio)
+      0x2C ACK <- XMOS control (XVF3800)
+      0x3C ACK <- SSD1306/SH1106 OLED
+[131570 ms] J6  SDA=D2/GPIO3  SCL=D0/GPIO1   (free pads, nothing else attached)
+      0x08 ACK
+      0x09 ACK
+      0x0A ACK
+      0x0B ACK
+      0x0C ACK
+      0x0D ACK
+      0x0E ACK
+      0x0F ACK
+      ... 112 ACKs total  <- FLOATING BUS, no device here
+      panel on J2
+
+=== ROUND: clock A/B ===
+
+--- 100 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 69 ok, 1 nak   codes: [4]=1
+
+--- 400 kHz ---
+      bus recovery: stuck=0, SDA=1 SCL=1
+      init + 0xA5: 19 ok, 0 nak
+        panel must be solid white NOW (hardware all-on)
+      HOLD 8 s: 0xA5 all-on
+         8 s
+         6 s
+         4 s
+         2 s
+      frame 0xFF via GDDRAM: 69 ok, 1 nak   codes: [4]=1
+=== ROUND END ===
+code 2 = address NACK (device silent), 4 = bus/arbitration, 5 = timeout

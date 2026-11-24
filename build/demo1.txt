@@ -1,0 +1,52 @@
+
+=== wake_demo: Hi ESP -> chime + LED animation -> command -> DOA ===
+chime 11849 samples (0.74 s)
+i2s full duplex: ok
+  -> DOA idle (boot)
+ESP_SR: ok
+ready: say "Hi ESP", then one of:
+  lights on | lights off | red light | green light | blue light
+  rainbow | breathe | spin ring
+  DOA  93 deg
+  DOA 261 deg
+
+*** "HI ESP" ***
+  playing chime
+  listening for a command (5.8 s)...
+  -> DOA idle (no command)
+  DOA 255 deg
+  DOA 264 deg
+  DOA 264 deg
+  DOA 186 deg
+  DOA 186 deg
+  DOA 263 deg
+  DOA 264 deg
+  DOA 261 deg
+
+*** "HI ESP" ***
+  playing chime
+  listening for a command (5.8 s)...
+  -> DOA idle (no command)
+  DOA 260 deg
+  DOA 262 deg
+
+*** "HI ESP" ***
+  playing chime
+  listening for a command (5.8 s)...
+  command 3
+  -> DOA idle (animation done)
+  DOA 188 deg
+
+*** "HI ESP" ***
+  playing chime
+  listening for a command (5.8 s)...
+  -> DOA idle (no command)
+  DOA 260 deg
+  DOA 260 deg
+  DOA 260 deg
+  DOA 260 deg
+  DOA 260 deg
+  DOA 260 deg
+
+*** "HI ESP" ***
+  playing chime

@@ -1,0 +1,52 @@
+
+=== wifi_probe: <ssid> -> PC brain ===
+connecting to <ssid>.....
+connected
+  local IP : 192.168.7.102
+  gateway  : 192.168.6.2
+  subnet   : 255.255.254.0
+  DNS      : 202.96.134.133
+  RSSI     : -35 dBm
+  channel  : 1
+  BSSID    : 58:B4:BB:93:B8:E2
+  MAC      : B8:1F:3F:D7:AF:04
+
+target PC: 192.168.7.217:9001
+  -> unicast   192.168.7.217    JARVIS 0001 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0002 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0003 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0004 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0005 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0006 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0007 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0008 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0009 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0010 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0011 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0012 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0013 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0014 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0015 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0016 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0017 0
+     <- no reply
+  -> broadcast 255.255.255.255  JARVIS 0018 0
+     <- no reply
+  -> unicast   192.168.7.217    JARVIS 0019 0
+     <- ACK from 192.168.7.217: ACK 17

@@ -1,0 +1,16 @@
+
+=== imu_bb: MPU6050 on D4/D5, software I2C 50 kHz ===
+idle levels: SDA=1 SCL=1 (both must be 1)
+--- step 1: scan (software I2C, 50 kHz) ---
+  0x18 ACK  <- TLV320 codec
+  0x2C ACK  <- XMOS control
+--- step 1b: MPU detect ---
+
+check VCC=3.3V, GND, SDA->D4, SCL->D5; AD0 floating means 0x68
+retrying every 3 s
+[3s] still no IMU (114 i2c errors so far)
+[6s] still no IMU (116 i2c errors so far)
+[9s] still no IMU (118 i2c errors so far)
+[12s] still no IMU (120 i2c errors so far)
+[15s] still no IMU (122 i2c errors so far)
+[18s] still no IMU (124 i2c errors so far)

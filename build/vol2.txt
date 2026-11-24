@@ -1,0 +1,16 @@
+  DOA  90 deg
+  DOA  65 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+  DOA  90 deg
+audio: STOP

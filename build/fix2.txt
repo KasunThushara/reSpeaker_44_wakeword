@@ -1,0 +1,70 @@
+  DOA 304 deg
+  DOA 344 deg
+  DOA 344 deg
+  DOA 344 deg
+  DOA 344 deg
+  DOA 344 deg
+  DOA 344 deg
+
+[ 99170 ms] *** "HI ESP" #1 ***
+[ 99840 ms] chime done
+[ 99991 ms] command mode open
+[100501 ms] listening for a command (8 s)
+[108505 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 345 deg
+  DOA 243 deg
+
+[111036 ms] *** "HI ESP" #2 ***
+[111705 ms] chime done
+[111856 ms] command mode open
+[112367 ms] listening for a command (8 s)
+[120370 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 268 deg
+
+[122332 ms] *** "HI ESP" #3 ***
+[123000 ms] chime done
+[123151 ms] command mode open
+[123660 ms] listening for a command (8 s)
+[131665 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 267 deg
+  DOA 267 deg
+
+[134495 ms] *** "HI ESP" #4 ***
+[135165 ms] chime done
+[135316 ms] command mode open
+[135825 ms] listening for a command (8 s)
+[137132 ms] raw id=1 phrase=1 -> "turn it red" -> cmd 1
+  -> DOA idle (animation done)
+  DOA 267 deg
+  DOA 267 deg
+  DOA 267 deg
+  DOA 266 deg
+
+[144892 ms] *** "HI ESP" #5 ***
+[145560 ms] chime done
+[145710 ms] command mode open
+[146220 ms] listening for a command (8 s)
+[154225 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 345 deg
+  DOA 344 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 344 deg
+  DOA 344 deg
+  DOA 344 deg

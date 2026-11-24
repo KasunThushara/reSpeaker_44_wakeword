@@ -1,0 +1,157 @@
+  DOA 270 deg
+  DOA 270 deg
+  DOA   1 deg
+  DOA   1 deg
+  DOA 274 deg
+  DOA 356 deg
+  DOA   1 deg
+  DOA   1 deg
+  DOA   1 deg
+  DOA   1 deg
+  DOA   1 deg
+  DOA   1 deg
+  DOA   1 deg
+  DOA 188 deg
+  DOA 208 deg
+  DOA 189 deg
+  DOA 239 deg
+  DOA 239 deg
+  DOA 239 deg
+  DOA 239 deg
+  DOA 239 deg
+  DOA 239 deg
+  DOA 262 deg
+  DOA   5 deg
+  DOA   7 deg
+  DOA  82 deg
+  DOA 198 deg
+  DOA 238 deg
+  DOA 238 deg
+  DOA 238 deg
+  DOA 238 deg
+  DOA  80 deg
+
+[120561 ms] *** "HI ESP" #4 ***
+[121230 ms] chime done
+[121388 ms] command mode open
+[121710 ms] listening for a command (8 s)
+[129715 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  80 deg
+  DOA  80 deg
+  DOA  79 deg
+
+[135127 ms] *** "HI ESP" #5 ***
+[135795 ms] chime done
+[135951 ms] command mode open
+[136286 ms] listening for a command (8 s)
+[144290 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 238 deg
+  DOA 238 deg
+  DOA  81 deg
+  DOA  81 deg
+
+[147470 ms] *** "HI ESP" #6 ***
+[148140 ms] chime done
+[148290 ms] command mode open
+[148614 ms] listening for a command (8 s)
+[156615 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  81 deg
+  DOA  81 deg
+  DOA  84 deg
+
+[161450 ms] *** "HI ESP" #7 ***
+[162120 ms] chime done
+[162270 ms] command mode open
+[162595 ms] listening for a command (8 s)
+[164675 ms] raw id=1 phrase=1 -> "turn it red" -> cmd 1
+  -> DOA idle (animation done)
+  DOA  85 deg
+
+[168621 ms] *** "HI ESP" #8 ***
+[169290 ms] chime done
+[169440 ms] command mode open
+[169763 ms] listening for a command (8 s)
+[171541 ms] raw id=2 phrase=2 -> "switch to green" -> cmd 2
+  -> DOA idle (animation done)
+  DOA  85 deg
+  DOA  86 deg
+
+[175760 ms] *** "HI ESP" #9 ***
+[176430 ms] chime done
+[176580 ms] command mode open
+[176905 ms] listening for a command (8 s)
+[178110 ms] raw id=3 phrase=3 -> "paint it blue" -> cmd 3
+  -> DOA idle (animation done)
+  DOA  86 deg
+
+[182420 ms] *** "HI ESP" #10 ***
+[183090 ms] chime done
+[183240 ms] command mode open
+[183577 ms] listening for a command (8 s)
+[185432 ms] raw id=4 phrase=4 -> "make a rainbow" -> cmd 4
+  -> DOA idle (animation done)
+  DOA  86 deg
+  DOA  86 deg
+
+[190099 ms] *** "HI ESP" #11 ***
+[190770 ms] chime done
+[190920 ms] command mode open
+[191257 ms] listening for a command (8 s)
+[194305 ms] raw id=5 phrase=5 -> "all lights on" -> cmd 5
+  -> DOA idle (animation done)
+  DOA  86 deg
+
+[199731 ms] *** "HI ESP" #12 ***
+[200399 ms] chime done
+[200550 ms] command mode open
+[200873 ms] listening for a command (8 s)
+[203966 ms] raw id=6 phrase=6 -> "turn it off" -> cmd 6
+  -> DOA idle (animation done)
+  DOA  85 deg
+
+[209194 ms] *** "HI ESP" #13 ***
+[209864 ms] chime done
+[210015 ms] command mode open
+[210339 ms] listening for a command (8 s)
+[211575 ms] raw id=7 phrase=7 -> "slow motion" -> cmd 7
+  -> DOA idle (animation done)
+  DOA  85 deg
+  DOA  85 deg
+
+[216531 ms] *** "HI ESP" #14 ***
+[217199 ms] chime done
+[217355 ms] command mode open
+[217673 ms] listening for a command (8 s)
+[218919 ms] raw id=8 phrase=8 -> "spin the ring" -> cmd 8
+  -> DOA idle (animation done)
+  DOA  85 deg
+  DOA  86 deg
+  DOA  86 deg
+  DOA  86 deg
+
+[231050 ms] *** "HI ESP" #15 ***
+[231719 ms] chime done
+[231870 ms] command mode open
+[232195 ms] listening for a command (8 s)
+[240199 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  88 deg
+  DOA  87 deg
+
+[243530 ms] *** "HI ESP" #16 ***
+[244199 ms] chime done
+[244350 ms] command mode open
+[244674 ms] listening for a command (8 s)
+[252679 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  87 deg
+
+[261110 ms] *** "HI ESP" #17 ***
+[261779 ms] chime done
+[261929 ms] command mode open
+[262267 ms] listening for a command (8 s)
+[263805 ms] raw id=1 phrase=1 -> "turn it red" -> cmd 1
+  -> DOA idle (animation done)

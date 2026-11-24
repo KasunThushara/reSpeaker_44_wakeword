@@ -1,0 +1,18 @@
+# Normalize text, protect binaries
+* text=auto
+
+*.ino  text
+*.h    text
+*.py   text
+*.js   text
+*.css  text
+*.html text
+*.md   text
+*.json text
+*.bat  text
+
+*.bin   binary
+*.wav   binary
+*.raw   binary
+*.woff2 binary
+*.elf   binary

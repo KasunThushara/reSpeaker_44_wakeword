@@ -1,0 +1,83 @@
+
+=== imu_bb: MPU6050 on D4/D5, software I2C, both pin orders ===
+idle levels: D4(SDA)=1 D5(SCL)=1 (both must be 1)
+--- full scan in the normal order ---
+  0x18 ACK  <- TLV320 codec
+  0x2C ACK  <- XMOS
+--- IMU detect (both orders) ---
+  !!! the IMU answers only sometimes: that is a bad connection
+  !!! (loose dupont on a 2.0 mm pin, or a cold joint), not a pin error
+*** IMU found at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED 20 times (ACKs the address but returns no data)
+[  2s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 1/8 ACK  <- FLAKY CONTACT | idle 1/1
+  !!! the IMU answers only sometimes: that is a bad connection
+  !!! (loose dupont on a 2.0 mm pin, or a cold joint), not a pin error
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  WHO_AM_I = 0xFF  (unexpected)
+  PWR_MGMT_1 0xFF -> FAILED -> 0xFF
+  100 Hz, +-250 dps, +-2 g
+       ax      ay      az     |g|    temp      gx      gy      gz
+[  3s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[  3s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[  4s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[  4s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[  5s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[  5s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[  6s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[  6s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[  7s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[  7s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[  8s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[  8s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[  9s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 1/8 ACK  <- FLAKY CONTACT | idle 1/1
+  !!! the IMU answers only sometimes: that is a bad connection
+  !!! (loose dupont on a 2.0 mm pin, or a cold joint), not a pin error
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED 20 times (ACKs the address but returns no data)
+[ 10s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 10s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 11s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 11s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 12s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 12s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 13s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 13s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 14s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 14s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 15s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 1/8 ACK  <- FLAKY CONTACT | idle 1/1
+  !!! the IMU answers only sometimes: that is a bad connection
+  !!! (loose dupont on a 2.0 mm pin, or a cold joint), not a pin error
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED 20 times (ACKs the address but returns no data)
+[ 16s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 1/8 ACK  <- FLAKY CONTACT | idle 1/1
+  !!! the IMU answers only sometimes: that is a bad connection
+  !!! (loose dupont on a 2.0 mm pin, or a cold joint), not a pin error
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED 20 times (ACKs the address but returns no data)
+[ 17s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 1/8 ACK  <- FLAKY CONTACT | idle 1/1
+  !!! the IMU answers only sometimes: that is a bad connection
+  !!! (loose dupont on a 2.0 mm pin, or a cold joint), not a pin error
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED 20 times (ACKs the address but returns no data)
+[ 18s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 18s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 19s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 19s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 20s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 20s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 21s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 21s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1
+[ 22s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 1/8 ACK  <- FLAKY CONTACT | idle 1/1
+  !!! the IMU answers only sometimes: that is a bad connection
+  !!! (loose dupont on a 2.0 mm pin, or a cold joint), not a pin error
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED 20 times (ACKs the address but returns no data)
+[ 23s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU 0/8 ACK | idle 1/1
+[ 23s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU 0/8 ACK | idle 1/1

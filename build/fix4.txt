@@ -1,0 +1,63 @@
+
+=== wake_demo v3: Hi ESP -> chime -> command -> animation -> DOA ===
+say: "turn it red" "switch to green" "paint it blue" "make a rainbow"
+     "all lights on" "turn it off" "slow motion"/"calm down" "spin the ring"
+AIC3104 output unmuted at 0 dB: ok
+  -> DOA idle (boot)
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakeNet9_v1h24_Hi,ESP_3_0.63_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Hi ESP, then a command right away
+  DOA 104 deg
+  DOA 104 deg
+  DOA 104 deg
+
+[  8751 ms] *** "HI ESP" #1 ***
+[  9421 ms] chime done
+[  9578 ms] command mode open
+[  9895 ms] listening for a command (8 s)
+[ 13937 ms] raw id=8 phrase=8 -> "calm down" -> cmd 7
+  -> DOA idle (animation done)
+  DOA 121 deg
+  DOA 190 deg
+
+[ 19433 ms] *** "HI ESP" #2 ***
+[ 20101 ms] chime done
+[ 20252 ms] command mode open
+[ 20574 ms] listening for a command (8 s)
+[ 28576 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 121 deg
+  DOA 121 deg
+  DOA 121 deg
+  DOA 191 deg
+  DOA 191 deg
+
+[ 32271 ms] *** "HI ESP" #3 ***
+[ 32941 ms] chime done
+[ 33097 ms] command mode open
+[ 33415 ms] listening for a command (8 s)
+[ 35958 ms] raw id=8 phrase=8 -> "calm down" -> cmd 7
+  -> DOA idle (animation done)
+  DOA 161 deg
+  DOA 121 deg
+  DOA 188 deg
+
+[ 40012 ms] *** "HI ESP" #4 ***
+[ 40681 ms] chime done
+[ 40831 ms] command mode open
+[ 41156 ms] listening for a command (8 s)
+[ 49161 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA 192 deg
+
+[ 52882 ms] *** "HI ESP" #5 ***
+[ 53551 ms] chime done
+[ 53701 ms] command mode open
+[ 54026 ms] listening for a command (8 s)
+[ 55872 ms] raw id=8 phrase=8 -> "calm down" -> cmd 7
+  -> DOA idle (animation done)

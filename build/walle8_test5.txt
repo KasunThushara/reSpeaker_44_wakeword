@@ -1,0 +1,149 @@
+  DOA  61 deg
+  DOA  85 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  87 deg
+  DOA  36 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA 170 deg
+  DOA 172 deg
+  DOA  81 deg
+  DOA  75 deg
+  DOA  76 deg
+  DOA  81 deg
+  DOA  81 deg
+  DOA  81 deg
+  DOA  81 deg
+  DOA  81 deg
+  DOA  81 deg
+  DOA  82 deg
+  DOA  82 deg
+
+[212006 ms] *** "HI WALLE" #1 ***
+[212676 ms] chime done
+[212826 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[213153 ms] listening for a command (6.5 s)
+[215011 ms] raw id=11 phrase=11 -> "give me a hug" -> cmd 11
+[215012 ms] -> PC  JARVIS 0001 11
+     <-     ACK 1
+audio: volume request 100%
+volume: 100% (-0.0 dB, DAC 0x00) music
+  audio: 1 pkts, 0 underruns, 0 gaps, 0 stale
+audio: STOP
+  -> DOA idle (animation done)
+  DOA  84 deg
+  DOA  85 deg
+  DOA  85 deg
+
+[219659 ms] *** "HI WALLE" #2 ***
+volume: 70% (-3.0 dB, DAC 0x06) chime
+volume: 100% (-0.0 dB, DAC 0x00) music
+[220334 ms] chime done
+[220484 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[220830 ms] listening for a command (6.5 s)
+[222938 ms] raw id=29 phrase=29 -> "charge your battery" -> cmd 29
+[222939 ms] -> PC  JARVIS 0002 29
+audio: volume request 100%
+     <-     ACK 2
+volume: 100% (-0.0 dB, DAC 0x00) music
+  -> DOA idle (animation done)
+  audio: 19 pkts, 0 underruns, 0 gaps, 0 stale
+  DOA  87 deg
+  DOA  87 deg
+audio: STOP
+  DOA  87 deg
+  DOA  88 deg
+  DOA  88 deg
+
+[227922 ms] *** "HI WALLE" #3 ***
+volume: 70% (-3.0 dB, DAC 0x06) chime
+volume: 100% (-0.0 dB, DAC 0x00) music
+[228594 ms] chime done
+[228748 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[229084 ms] listening for a command (6.5 s)
+[235586 ms] no command - amber double blink
+[235587 ms] -> PC  JARVIS 0003 99
+volume: 70% (-3.0 dB, DAC 0x06) listening timeout
+  -> DOA idle (back to DOA)
+     <-     ACK 3
+  DOA  90 deg
+
+[238572 ms] *** "HI WALLE" #4 ***
+[239241 ms] chime done
+[239391 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[239719 ms] listening for a command (6.5 s)
+[240932 ms] raw id=39 phrase=39 -> "show me the weather" -> cmd 39
+[240933 ms] -> PC  JARVIS 0004 39
+audio: volume request 100%
+     <-     ACK 4
+volume: 100% (-0.0 dB, DAC 0x00) music
+  -> DOA idle (animation done)
+  audio: 89 pkts, 2 underruns, 0 gaps, 0 stale
+audio: STOP
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+
+[247858 ms] *** "HI WALLE" #5 ***
+volume: 70% (-3.0 dB, DAC 0x06) chime
+volume: 100% (-0.0 dB, DAC 0x00) music
+[248528 ms] chime done
+[248681 ms] command mode open
+volume: 30% (-10.5 dB, DAC 0x15) listening
+[249019 ms] listening for a command (6.5 s)
+[250522 ms] raw id=1 phrase=1 -> "go straight ahead" -> cmd 1
+[250522 ms] -> PC  JARVIS 0005 1
+     <-     ACK 5
+audio: volume request 100%
+volume: 100% (-0.0 dB, DAC 0x00) music
+  -> DOA idle (animation done)
+  audio: 107 pkts, 2 underruns, 0 gaps, 0 stale
+audio: STOP
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA  91 deg
+  DOA 148 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA  85 deg
+  DOA  82 deg
+  DOA  80 deg
+  DOA  80 deg
+  DOA  79 deg
+  DOA  79 deg
+  DOA  64 deg
+  DOA  51 deg
+  DOA  50 deg
+  DOA  51 deg
+  DOA  51 deg
+  DOA  51 deg
+  DOA  51 deg
+  DOA  71 deg

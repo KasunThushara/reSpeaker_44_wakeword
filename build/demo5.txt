@@ -1,0 +1,99 @@
+
+=== wake_demo v3: Hi ESP -> chime -> command -> animation -> DOA ===
+say: "turn it red" | "switch to green" | "paint it blue" | "make a rainbow"
+AIC3104 output unmuted at 0 dB: ok
+i2s full duplex: ok
+  -> DOA idle (boot)
+ESP_SR: ok
+
+  DOA 302 deg
+  DOA 302 deg
+  DOA 302 deg
+  DOA 302 deg
+  DOA 302 deg
+  DOA 175 deg
+
+*** "HI ESP" #1 ***
+  listening for a command...
+  raw id=1 phrase=1 -> "turn it red" -> cmd 1
+  -> DOA idle (animation done)
+  DOA 174 deg
+  DOA 174 deg
+
+*** "HI ESP" #2 ***
+  listening for a command...
+  raw id=2 phrase=2 -> "switch to green" -> cmd 2
+  -> DOA idle (animation done)
+  DOA 301 deg
+  DOA 301 deg
+  DOA 191 deg
+
+*** "HI ESP" #3 ***
+  listening for a command...
+  raw id=3 phrase=3 -> "paint it blue" -> cmd 3
+  -> DOA idle (animation done)
+  DOA 173 deg
+  DOA 174 deg
+
+*** "HI ESP" #4 ***
+  listening for a command...
+  raw id=4 phrase=4 -> "make a rainbow" -> cmd 4
+  -> DOA idle (animation done)
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 301 deg
+  DOA 301 deg
+  DOA 132 deg
+  DOA 236 deg
+
+*** "HI ESP" #5 ***
+  listening for a command...
+  -> DOA idle (no command)
+  DOA 251 deg
+  DOA 252 deg
+  DOA 252 deg
+  DOA 253 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 256 deg
+  DOA 222 deg
+  DOA 194 deg
+  DOA 193 deg
+  DOA 193 deg
+  DOA 134 deg
+  DOA 130 deg
+  DOA 130 deg
+  DOA 130 deg
+  DOA 130 deg
+  DOA 190 deg
+  DOA 193 deg
+  DOA 103 deg
+  DOA 103 deg
+  DOA 103 deg
+  DOA 103 deg
+  DOA 103 deg
+  DOA 129 deg
+  DOA 130 deg
+  DOA 127 deg
+  DOA 130 deg
+  DOA 103 deg
+  DOA  66 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA 106 deg
+  DOA 130 deg
+  DOA 130 deg

@@ -1,0 +1,17 @@
+  flash round: 11 nak
+  flash round: 8 nak
+--- re-detect (you can move the wires now) ---
+  J2  D4/D5 (shared with codec + XMOS)   0 ACK
+  J6  D2/D0 (free pair)                  0 ACK
+  panel not found on either pair
+  flash round: 69 nak
+--- re-detect (you can move the wires now) ---
+  J2  D4/D5 (shared with codec + XMOS)   3 ACK, 0x3C present
+  flash round: 5 nak
+  flash round: 5 nak
+  flash round: 5 nak
+  flash round: 5 nak
+--- re-detect (you can move the wires now) ---
+  J2  D4/D5 (shared with codec + XMOS)   0 ACK
+  J6  D2/D0 (free pair)                  0 ACK
+  panel not found on either pair

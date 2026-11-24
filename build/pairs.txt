@@ -1,0 +1,16 @@
+
+=== display_pairs: scan J2 / J6 / J5, then drive the panel ===
+
+--- scanning every pair @100 kHz ---
+  J2  SDA=D4/GPIO5   SCL=D5/GPIO6       2 ACK 0x18 0x2c
+  J6  SDA=D2/GPIO3   SCL=D0/GPIO1      112 ACK 0x8 0x9 0xa 0xb  (floating bus / ghosts)
+  J5  SDA=D14/GPIO41 SCL=D13/GPIO40     0 ACK  -
+  J5  SDA=D13/GPIO40 SCL=D14/GPIO41     1 ACK 0x3c
+     -> panel found here
+*** using J5  SDA=D13/GPIO40 SCL=D14/GPIO41 ***
+  rise SDA: NEVER
+  rise SCL: NEVER
+  @100k init 16 ok/1 nak | 0xA5 clean
+  @100k frame 0 ok/68 nak  (2 s on / 2 s off)
+  @400k init 0 ok/17 nak | 0xA5 LOST
+  @400k frame 0 ok/68 nak  (2 s on / 2 s off)

@@ -1,0 +1,102 @@
+[269474 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA   8 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA   9 deg
+  DOA  12 deg
+  DOA  12 deg
+  DOA  12 deg
+  DOA  12 deg
+  DOA  12 deg
+  DOA  12 deg
+
+[311284 ms] *** "HI WALLE" #2 ***
+[311953 ms] chime done
+[312104 ms] command mode open
+[312442 ms] listening for a command (8 s)
+[320444 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  13 deg
+  DOA  13 deg
+  DOA  14 deg
+  DOA  14 deg
+  DOA  14 deg
+
+[329134 ms] *** "HI WALLE" #3 ***
+[329803 ms] chime done
+[329961 ms] command mode open
+[330283 ms] listening for a command (8 s)
+[338288 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  14 deg
+  DOA  16 deg
+  DOA  17 deg
+  DOA  17 deg
+  DOA  17 deg
+  DOA  17 deg
+  DOA  17 deg
+
+[343595 ms] *** "HI WALLE" #4 ***
+[344263 ms] chime done
+[344414 ms] command mode open
+[344736 ms] listening for a command (8 s)
+[352738 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  17 deg
+  DOA  17 deg
+  DOA  17 deg
+  DOA  18 deg
+
+[355953 ms] *** "HI WALLE" #5 ***
+[356623 ms] chime done
+[356779 ms] command mode open
+[357112 ms] listening for a command (8 s)
+[365113 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  19 deg
+  DOA  19 deg
+
+[369844 ms] *** "HI WALLE" #6 ***
+[370513 ms] chime done
+[370663 ms] command mode open
+[371001 ms] listening for a command (8 s)
+[379003 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+  DOA  18 deg
+
+[386823 ms] *** "HI WALLE" #7 ***
+[387493 ms] chime done
+[387643 ms] command mode open
+[387967 ms] listening for a command (8 s)

@@ -1,0 +1,32 @@
+
+=== wake_demo v3: Hi Walle -> chime -> command -> animation -> DOA ===
+say: "turn it red" "switch to green" "paint it blue" "make a rainbow"
+     "all lights on" "turn it off" "slow motion" "spin the ring"
+AIC3104 output unmuted at 0 dB: ok
+  -> DOA idle (boot)
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakenet9l_tts2h12_Hi,Wall,E or Hi,??????_3_0.630_0.635, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Hi Walle, then a command right away
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 251 deg
+  DOA 332 deg
+  DOA 254 deg
+  DOA 251 deg
+  DOA 251 deg

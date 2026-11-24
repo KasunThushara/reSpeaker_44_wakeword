@@ -1,0 +1,13 @@
+
+=== display_clean_init: retry init until zero NAKs ===
+  CLEAN SSD1306 @100k after 18 tries
+  SSD1306: 0xA5 hardware all-on - PANEL SHOULD BE SOLID WHITE (10 s)
+  SSD1306: 0xFF frame -> 62 ok, 6 nak (5 s)
+  CLEAN SH1106 @100k after 10 tries
+  SH1106: 0xA5 hardware all-on - PANEL SHOULD BE SOLID WHITE (10 s)
+  SH1106: 0xFF frame -> 45 ok, 23 nak (5 s)
+=== test complete. repeating in 5 s ===
+--- repeat ---
+  CLEAN SSD1306 @100k after 5 tries
+  SSD1306: 0xA5 hardware all-on - PANEL SHOULD BE SOLID WHITE (10 s)
+  SSD1306: 0xFF frame -> 13 ok, 55 nak (5 s)

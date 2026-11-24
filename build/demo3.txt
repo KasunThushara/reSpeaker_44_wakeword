@@ -1,0 +1,51 @@
+
+=== wake_demo v3: Hi ESP -> chime -> command -> animation -> DOA ===
+say: "turn it red" | "turn it green" | "turn it blue" | "make a rainbow"
+AIC3104 output unmuted at 0 dB: ok
+i2s full duplex: ok
+  -> DOA idle (boot)
+ESP_SR: ok
+
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+  DOA 303 deg
+
+*** "HI ESP" #1 ***
+  listening for a command...
+  heard "turn it blue" -> command 2 (phrase 2)
+  -> DOA idle (animation done)
+  DOA  92 deg
+
+*** "HI ESP" #2 ***
+  listening for a command...
+  heard "make a rainbow" -> command 3 (phrase 3)
+  -> DOA idle (animation done)
+  DOA  93 deg
+  DOA  94 deg
+
+*** "HI ESP" #3 ***
+  listening for a command...
+  heard "turn it green" -> command 1 (phrase 1)
+  -> DOA idle (animation done)
+  DOA 175 deg
+  DOA 112 deg
+
+*** "HI ESP" #4 ***
+  listening for a command...
+  heard "?" -> command 4 (phrase 4)
+  -> DOA idle (animation done)
+  DOA  94 deg
+  DOA  94 deg
+  DOA  94 deg
+  DOA  94 deg
+  DOA 236 deg
+  DOA 151 deg
+  DOA 171 deg
+  DOA 175 deg
+  DOA 175 deg
+  DOA 175 deg

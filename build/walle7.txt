@@ -1,0 +1,38 @@
+[461712 ms] chime done
+[461869 ms] command mode open
+[462201 ms] listening for a command (8 s)
+[470202 ms] no command - amber double blink
+  -> DOA idle (back to DOA)
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+
+[480109 ms] *** "HI WALLE" #10 ***
+[480777 ms] chime done
+[480927 ms] command mode open
+[481251 ms] listening for a command (8 s)
+[485348 ms] raw id=1 phrase=1 -> "turn it red" -> cmd 1
+  -> DOA idle (animation done)
+  DOA  20 deg
+  DOA  20 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  19 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  20 deg
+  DOA  90 deg
+  DOA 179 deg
+  DOA 179 deg
+  DOA 179 deg
+  DOA 179 deg
+  DOA 179 deg

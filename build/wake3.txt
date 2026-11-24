@@ -1,0 +1,35 @@
+[   20s] listening... wakes=0 heap=220140
+[   25s] listening... wakes=0 heap=220140
+[   30s] listening... wakes=0 heap=220140
+
+*** "HI ESP" DETECTED  (#1) ***
+
+*** "HI ESP" DETECTED  (#2) ***
+[   35s] listening... wakes=2 heap=220140
+
+*** "HI ESP" DETECTED  (#3) ***
+
+*** "HI ESP" DETECTED  (#4) ***
+
+*** "HI ESP" DETECTED  (#5) ***
+[   40s] listening... wakes=5 heap=220140
+
+*** "HI ESP" DETECTED  (#6) ***
+
+*** "HI ESP" DETECTED  (#7) ***
+[   45s] listening... wakes=7 heap=220140
+
+*** "HI ESP" DETECTED  (#8) ***
+[   50s] listening... wakes=8 heap=220140
+
+*** "HI ESP" DETECTED  (#9) ***
+
+*** "HI ESP" DETECTED  (#10) ***
+[   55s] listening... wakes=10 heap=220140
+
+*** "HI ESP" DETECTED  (#11) ***
+
+*** "HI ESP" DETECTED  (#12) ***
+[   60s] listening... wakes=12 heap=220140
+
+*** "HI ESP" DETECTED  (#13) ***

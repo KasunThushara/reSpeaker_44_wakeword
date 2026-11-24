@@ -1,0 +1,50 @@
+
+=== wake_demo v4: Jarvis -> chime -> command -> PC + LED -> DOA ===
+say: "play some music" "stop the music" "make a picture" "tell me a joke"
+     "change the mood" "show me the weather" "start the demo"
+     "shut it down" "ask the model"
+
+
+  DOA 254 deg
+  DOA 254 deg
+  DOA  21 deg
+  DOA  81 deg
+
+[ 27626 ms] *** "HI JARVIS" #1 ***
+[ 28296 ms] chime done
+[ 28446 ms] command mode open
+[ 28770 ms] listening for a command (8 s)
+[ 29990 ms] raw id=1 phrase=1 -> "play some music" -> cmd 1
+[ 29991 ms] -> PC  JARVIS 0001 1
+[ 30241 ms] retry 1
+[ 30271 ms] -> PC  JARVIS 0001 1
+[ 30522 ms] retry 2
+[ 30552 ms] -> PC  JARVIS 0001 1
+[ 30803 ms] retry 3
+  no ACK from PC after 3 attempts
+  -> DOA idle (done - no ACK from PC)
+  DOA  85 deg
+  DOA  86 deg
+  DOA  85 deg
+
+[ 38951 ms] *** "HI JARVIS" #2 ***
+[ 39621 ms] chime done
+[ 39771 ms] command mode open
+[ 40095 ms] listening for a command (8 s)
+[ 41913 ms] raw id=1 phrase=1 -> "play some music" -> cmd 1
+[ 41913 ms] -> PC  JARVIS 0002 1
+     <-     ACK 1
+  -> DOA idle (animation done)
+  DOA  86 deg
+  DOA  86 deg
+  DOA  86 deg
+  DOA  86 deg
+
+[ 55151 ms] *** "HI JARVIS" #3 ***
+[ 55820 ms] chime done
+[ 55978 ms] command mode open
+[ 56311 ms] listening for a command (8 s)
+[ 58427 ms] raw id=1 phrase=1 -> "play some music" -> cmd 1
+[ 58428 ms] -> PC  JARVIS 0003 1
+     <-     ACK 1
+  -> DOA idle (animation done)

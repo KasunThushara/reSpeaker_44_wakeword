@@ -1,0 +1,51 @@
+
+=== imu_bb: MPU6050 on D4/D5, software I2C, both pin orders ===
+idle levels: D4(SDA)=1 D5(SCL)=1 (both must be 1)
+--- full scan in the normal order ---
+  0x18 ACK  <- TLV320 codec
+  0x2C ACK  <- XMOS
+--- IMU detect (both orders) ---
+[  2s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+*** MPU6050 NOT DETECTED in either pin order ***
+check: VCC=3.3V at the module, GND, and that the module's power LED is on
+watching live - reseat the wires and it will pick up automatically
+[  2s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[  2s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[  3s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[  3s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[  4s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[  4s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[  5s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[  5s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[  6s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[  6s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[  7s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[  7s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[  8s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU ACK | idle 1/1
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED (ACKs the address but returns no data)
+[  9s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[  9s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 10s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 10s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 11s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 11s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 12s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 12s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 13s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 13s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 14s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU ACK | idle 1/1
+*** IMU appeared at 0x68 ***
+--- WHO_AM_I ---
+  read FAILED (ACKs the address but returns no data)
+[ 15s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 15s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 16s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 16s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 17s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 17s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 18s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 18s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1
+[ 19s] SDA=D4 SCL=D5 | 0x18 ACK 0x2C ACK | IMU --- | idle 1/1
+[ 19s] SDA=D5 SCL=D4 | 0x18 --- 0x2C --- | IMU --- | idle 1/1

@@ -1,0 +1,51 @@
+  raw id=6 phrase=6 -> "turn it off" -> cmd 6
+  -> DOA idle (animation done)
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+
+*** "HI ESP" #3 ***
+  listening for a command...
+  -> DOA idle (no command - red blink = not understood)
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 174 deg
+  DOA 295 deg
+  DOA 302 deg
+  DOA 302 deg
+
+*** "HI ESP" #4 ***
+  listening for a command...
+  raw id=8 phrase=8 -> "spin the ring" -> cmd 8
+  -> DOA idle (animation done)
+  DOA  92 deg
+  DOA  92 deg
+  DOA  92 deg
+  DOA  91 deg
+
+*** "HI ESP" #5 ***
+  listening for a command...
+  -> DOA idle (no command - red blink = not understood)
+  DOA  85 deg
+  DOA  85 deg
+  DOA  85 deg
+  DOA  85 deg
+  DOA  85 deg
+  DOA  85 deg
+  DOA  85 deg
+  DOA  22 deg
+  DOA 302 deg
+  DOA 302 deg
+  DOA 341 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 343 deg
+  DOA 229 deg
+  DOA 196 deg
+  DOA 196 deg
+  DOA 196 deg
+  DOA 196 deg

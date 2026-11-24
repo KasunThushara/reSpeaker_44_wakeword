@@ -1,0 +1,21 @@
+
+=== imu_test: MPU6050 on D4/D5 (GPIO5/6), VCC 3.3 V ===
+bus recovery: stuck=0
+rise SDA: 0.43 us | rise SCL: 1.43 us
+(pull-ups present = rises; NEVER = nothing pulling that line up)
+
+bus recovery: stuck=0
+--- step 1: scan ---
+  0x2C ACK  <- XMOS control (XVF3800)
+--- step 1b: MPU detect ---
+  0x68 responds
+*** device found at 0x68 ***
+--- step 2/3: identity + wake ---
+  WHO_AM_I read FAILED - ACKs the address but will not read
+IMU present but not usable - see above
+[3s] no IMU. bus: codec 0x18 ACK (bus is alive), XMOS 0x2C ACK
+[6s] no IMU. bus: codec 0x18 ACK (bus is alive), XMOS 0x2C ACK
+[9s] no IMU. bus: codec 0x18 ACK (bus is alive), XMOS 0x2C ACK
+[12s] no IMU. bus: codec 0x18 ACK (bus is alive), XMOS 0x2C ACK
+[15s] no IMU. bus: codec 0x18 ACK (bus is alive), XMOS 0x2C ACK
+[18s] no IMU. bus: codec 0x18 ACK (bus is alive), XMOS 0x2C ACK

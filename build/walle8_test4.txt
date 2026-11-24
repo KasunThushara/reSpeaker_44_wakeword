@@ -1,0 +1,125 @@
+
+=== wake_demo walle: Hi Walle -> chime -> action -> PC + LED -> DOA ===
+say "Hi Walle", then one of the 8 voice actions:
+  go straight ahead / spin in circles / wave your hand / give me a hug
+
+WiFi: joining <ssid>......
+i2s full duplex: ok
+audio: ring 96000 bytes (ok)
+audio: listening on 9100
+audio tuning: AGCMAXGAIN=64, ASROUTGAIN=1.5, ASR on
+  -> DOA idle (boot)
+MC Quantized vadnet1:vadnet1_mediumv1_Speech_1_0.5_0.1, min speech:128 ms, min noise:992 ms, mode:0, threshold:0.500, channel:1, tigger:v1 (May 25 2026 15:51:02)
+MC Quantized wakenet9: wakenet9l_tts2h12_Hi,Wall,E or Hi,??????_3_0.580_0.585, tigger:v4, mode:0, p:0, (May 25 2026 15:51:00)
+Build fst from commands.
+Quantized MultiNet7:rnnt_ctc_2.0, name:mn7_en, (May 25 2026 15:51:00)
+Quantized MultiNet7 search method: 2, time out:5.8 s
+Build fst from commands.
+ESP_SR: ok
+ready - say Hi Walle, then a command right away
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  33 deg
+  DOA  70 deg
+  DOA  70 deg
+  DOA  70 deg
+  DOA  70 deg
+  DOA  70 deg
+  DOA  70 deg
+  DOA  70 deg
+  DOA  70 deg
+  DOA  69 deg
+  DOA  69 deg
+  DOA  69 deg
+  DOA  72 deg
+  DOA  76 deg
+  DOA  76 deg
+  DOA  76 deg
+  DOA 172 deg
+  DOA 172 deg
+  DOA 172 deg
+  DOA 172 deg
+  DOA  57 deg
+  DOA  54 deg
+  DOA  54 deg
+  DOA  54 deg
+  DOA  54 deg
+  DOA  53 deg
+  DOA  54 deg
+  DOA  54 deg
+  DOA  54 deg
+  DOA  54 deg
+  DOA  54 deg
+  DOA  50 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  31 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  46 deg
+  DOA  59 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  61 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  65 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  60 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg
+  DOA  61 deg

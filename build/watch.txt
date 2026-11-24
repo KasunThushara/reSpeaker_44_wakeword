@@ -1,0 +1,40 @@
+
+=== display_watch: 4 driver variants, bus recovered between each ===
+Each variant ~20 s. WATCH THE PANEL.
+
+>>> VARIANT 1: SSD1306 init + charge pump 0x8D 0x14
+    [bus recovery: stuck=0]
+    init                          13 ok,   4 nak
+    0xFF frame (6 s)              66 ok,   2 nak
+
+>>> VARIANT 2: SSD1309 (0xFD 0x12 unlock) + 0x8D 0x14
+    [bus recovery: stuck=0]
+    init                          16 ok,   3 nak
+    0xA5 hardware all-on (8 s)    17 ok,   3 nak
+    0xFF frame (6 s)              63 ok,   5 nak
+
+>>> VARIANT 3: SH1106 init, DC-DC 0xAD 0x8B, column offset 2
+    [bus recovery: stuck=0]
+    init                          14 ok,   2 nak
+    0xA5 hardware all-on (8 s)    15 ok,   2 nak
+    0xFF pages (6 s)              14 ok,  74 nak
+
+>>> VARIANT 4: SH1106 init, DC-DC 0xAD 0x8B, column offset 0
+    [bus recovery: stuck=0]
+    init                          14 ok,   2 nak
+    0xA5 hardware all-on (8 s)    14 ok,   3 nak
+    0xFF pages (6 s)              14 ok,  74 nak
+
+=== sweep done; repeating in 3 s ===
+
+>>> VARIANT 1: SSD1306 init + charge pump 0x8D 0x14
+    [bus recovery: stuck=0]
+    init                          14 ok,   3 nak
+    0xA5 hardware all-on (8 s)    15 ok,   3 nak
+    0xFF frame (6 s)               2 ok,  66 nak
+
+>>> VARIANT 2: SSD1309 (0xFD 0x12 unlock) + 0x8D 0x14
+    [bus recovery: stuck=0]
+    init                          17 ok,   2 nak
+    0xA5 hardware all-on (8 s)    18 ok,   2 nak
+    0xFF frame (6 s)              63 ok,   5 nak
